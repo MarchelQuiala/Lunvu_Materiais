@@ -230,6 +230,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // MOSTRAR WHATSAPP APENAS QUANDO FOOTER APARECE
     // ============================================
     
+
+
+
+
+
+    
 });
 
 // ============================================
@@ -418,9 +424,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 for (let i = 1; i <= 14; i++) {
                     produtos.push({
                         img: CLOUDINARY + 'placeholder.jpg', // crie um placeholder no Cloudinary
-                        nome: `Produto ${sub.id} - ${i}`,
-                        desc: `Descrição do produto ${i}`,
-                        material: 'Aço inox',
+                        nome: `ferro ${sub.id} - ${i}`,
+                        desc: `ferro 34kg ${i}`,
+                        material: 'Aluminio',
                         dimensoes: `${10 + i} x ${5 + i} cm`,
                         peso: `${i}.5 kg`,
                         cor: 'Cinza',
