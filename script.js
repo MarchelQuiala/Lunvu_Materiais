@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ============================================
-    // SEÇÃO NOSSOS MATERIAIS - TROCA DE IMAGENS
+    // SEÇÃO NOSSOS MATERIAIS - TROCA DE IMAGENS (PÁGINA INICIAL)
     // ============================================
     const materiaisGrid = document.getElementById('materiais-grid');
     const botoesCategoria = document.querySelectorAll('.btn-categoria');
@@ -227,22 +227,51 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ============================================
-    // MOSTRAR WHATSAPP APENAS QUANDO FOOTER APARECE
+    // FORMULÁRIO DE CONTACTO COM MENSAGEM INLINE (PÁGINA CONTATO)
     // ============================================
+    const contactForm = document.getElementById('contactForm');
+    const formMensagem = document.getElementById('form-mensagem');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            formMensagem.innerHTML = '<p style="color: #4361ee;">A enviar mensagem...</p>';
+            formMensagem.style.display = 'block';
+
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    formMensagem.innerHTML = '<p style="color: green;">✓ Mensagem enviada com sucesso! Entraremos em contacto em breve.</p>';
+                    contactForm.reset();
+                } else {
+                    formMensagem.innerHTML = '<p style="color: red;">✗ Erro ao enviar. Tente novamente.</p>';
+                }
+            } catch (error) {
+                formMensagem.innerHTML = '<p style="color: red;">✗ Erro de rede. Verifique sua conexão.</p>';
+            }
+        });
+    }
     
-
-
-
-
-
+    // ============================================
+    // MOSTRAR WHATSAPP APENAS QUANDO FOOTER APARECE (se implementado)
+    // ============================================
+    // (código para o WhatsApp pode ser adicionado aqui se necessário)
     
 });
 
 // ============================================
-// Código específico da página de catálogo
-// ============================================
-// ============================================
-// Código específico da página de catálogo
+// CÓDIGO ESPECÍFICO DA PÁGINA DE CATÁLOGO
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     const CLOUDINARY = "https://res.cloudinary.com/dhsg68f5x/image/upload/";
@@ -332,9 +361,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539209/uniao-preisolada-jobasi_-500x500_1_mhzi7v.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539208/braco-pe-90-600x600_pa4bwk.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539208/pinca-de-suspencao-mural-l7wv-600x600_pjkghz.jpg',
-            
-
-            // ... adicione as 14 URLs para elet1
         ],
         'elet2': [
             'https://res.cloudinary.com/dhsg68f5x/image/upload/S5_by36rt',
@@ -351,7 +377,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772540272/S14_gsimmk.webp',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772540272/S16_roqoxn.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772540270/S13_i7qj62.webp',
-            // ... adicione as 14 URLs para elet2
         ],
         'elet3': [
             'https://res.cloudinary.com/dhsg68f5x/image/upload/T6_ixlz8t',
@@ -368,7 +393,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772541594/T15_moemy1.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542565/OIP_6_hdtizo.webp',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542304/OIP_5_pmr8t3.webp',
-            // ...
         ],
         // Preencha os demais com [] ou com URLs reais
         'elet4': [],
@@ -423,10 +447,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Se não há URLs, usa placeholder
                 for (let i = 1; i <= 14; i++) {
                     produtos.push({
-                        img: CLOUDINARY + 'placeholder.jpg', // crie um placeholder no Cloudinary
-                        nome: `ferro ${sub.id} - ${i}`,
-                        desc: `ferro 34kg ${i}`,
-                        material: 'Aluminio',
+                        img: CLOUDINARY + 'placeholder.jpg',
+                        nome: `Produto ${sub.id} - ${i}`,
+                        desc: `Descrição do produto ${i}`,
+                        material: 'Aço inox',
                         dimensoes: `${10 + i} x ${5 + i} cm`,
                         peso: `${i}.5 kg`,
                         cor: 'Cinza',

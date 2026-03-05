@@ -102,16 +102,11 @@
                 </div>
             </div>
 
-          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-    <!-- ACCESS KEY (substituir pela UUID correta) -->
+<form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+    <!-- ACCESS KEY -->
     <input type="hidden" name="access_key" value="236f710f-f052-4850-a38f-c6985744d1b2">
-
     <!-- Assunto do email -->
     <input type="hidden" name="subject" value="Novo contacto do site Lunvu Materiais">
-
-    <!-- Redirecionamento após envio -->
-    <input type="hidden" name="redirect" value="obrigado.html">
-
     <!-- Proteção honeypot -->
     <input type="checkbox" name="botcheck" style="display: none;">
 
@@ -121,11 +116,11 @@
     <input type="tel" name="telefone" placeholder="Seu telefone">
     <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
 
-    <!-- hCaptcha (substituir a sitekey pela tua) -->
-    <div class="h-captcha" data-sitekey="COLOCA_A_TUA_SITEKEY_AQUI"></div>
-
     <button type="submit" class="btn-primary">Enviar Mensagem</button>
 </form>
+
+<!-- Div para a mensagem de retorno -->
+<div id="form-mensagem" class="form-mensagem"></div>
         </div>
     </section>
 
