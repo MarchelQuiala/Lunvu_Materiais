@@ -1,4 +1,4 @@
-/* Reset e Configurações Gerais */
+/* ====== RESET E CONFIGURAÇÕES GERAIS ====== */
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +25,7 @@ body {
     color: #4361ee;
 }
 
-/* Botões */
+/* ====== BOTÕES ====== */
 .btn-primary {
     display: inline-block;
     background: linear-gradient(45deg, #4361ee, #3a56d4);
@@ -63,7 +63,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* Navbar */
+/* ====== NAVBAR ====== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -75,9 +75,12 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+    /* Correção para comportamento inconsistente em mobile */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
 }
 
-/* Logo com imagem */
 .logo a {
     display: flex;
     align-items: center;
@@ -99,7 +102,6 @@ body {
     line-height: 1;
 }
 
-/* Menu horizontal (visível em desktop) */
 .nav-links {
     display: flex;
     list-style: none;
@@ -117,12 +119,10 @@ body {
     color: #4361ee;
 }
 
-/* Botão Orçamento visível em desktop */
 .desktop-only {
     display: inline-block;
 }
 
-/* Menu Toggle (3 barras) - escondido em desktop, visível em mobile */
 .menu-toggle {
     display: none;
     align-items: center;
@@ -141,22 +141,19 @@ body {
     transform: scale(1.1);
 }
 
-/* Responsividade: quando a tela for menor que 992px (mobile/tablet) */
+/* ====== RESPONSIVIDADE DA NAVBAR ====== */
 @media (max-width: 992px) {
     .nav-links {
         display: none;
     }
-    
     .menu-toggle {
         display: flex;
     }
-    
     .desktop-only {
         display: none;
     }
 }
 
-/* Ajuste fino para telas muito pequenas (opcional) */
 @media (max-width: 576px) {
     .logo-text {
         font-size: 22px;
@@ -166,57 +163,7 @@ body {
     }
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 150px 5% 100px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.hero-content {
-    flex: 1;
-    padding-right: 50px;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: #222;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 30px;
-    max-width: 600px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-/* Ajuste da imagem principal */
-.hero-image {
-    max-height: 380px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Seções Gerais */
+/* ====== SEÇÕES GERAIS ====== */
 .section-header {
     text-align: center;
     margin-bottom: 60px;
@@ -239,7 +186,7 @@ section {
     padding: 100px 5%;
 }
 
-/* Serviços */
+/* ====== SERVIÇOS (página serviços) ====== */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -291,7 +238,7 @@ section {
     color: #666;
 }
 
-/* Sobre */
+/* ====== SOBRE (página sobre) ====== */
 .about {
     background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
     border-radius: 30px;
@@ -363,7 +310,7 @@ section {
     font-weight: 500;
 }
 
-/* Contato */
+/* ====== CONTATO ====== */
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -426,7 +373,6 @@ section {
 /* ==================== */
 /* MENU LATERAL (SIDEBAR) */
 /* ==================== */
-
 .sidebar-overlay {
     position: fixed;
     top: 0;
@@ -601,9 +547,8 @@ section {
 }
 
 /* ==================== */
-/* NOVO FOOTER */
+/* FOOTER E NEWSLETTER */
 /* ==================== */
-
 .footer-newsletter {
     background: linear-gradient(135deg, #2a3f8f, #1b2b5e);
     padding: 60px 5%;
@@ -816,7 +761,6 @@ footer {
 /* ==================== */
 /* ANIMAÇÕES DE ENTRADA */
 /* ==================== */
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -876,9 +820,8 @@ footer {
 }
 
 /* ==================== */
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE GERAL */
 /* ==================== */
-
 @media (max-width: 992px) {
     .hero {
         flex-direction: column;
@@ -969,30 +912,27 @@ footer {
         padding: 10px 20px;
     }
 
-    /* ===== NEWSLETTER NO MOBILE ===== */
+    /* Newsletter mobile */
     .newsletter-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 20px 0;
     }
-
     .newsletter-form {
         width: 100%;
         flex-direction: column;
         gap: 10px;
         max-width: 100%;
     }
-
     .newsletter-form input {
-        width: 100% !important;        /* garante 100% de largura */
+        width: 100% !important;
         max-width: 100% !important;
         flex: none !important;
         padding: 12px 20px;
         border-radius: 50px;
         margin-right: 0;
     }
-
     .newsletter-form button {
         width: 100%;
         max-width: 100%;
@@ -1117,31 +1057,30 @@ footer {
 /* ====== PÁGINA SOBRE COM IMAGEM ====== */
 .about-page {
     padding: 120px 5% 80px;
-     
     background: #f9f9f9;
 }
 
 .about-grid {
     display: flex;
-    align-items: stretch; /* Faz com que os filhos tenham a mesma altura */
+    align-items: stretch;
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Permite quebra em mobile */
+    flex-wrap: wrap;
 }
 
 .about-image {
-    flex: 1 1 400px; /* Largura base, mas pode crescer/encolher */
+    flex: 1 1 400px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    display: flex; /* Para garantir que a imagem preencha */
+    display: flex;
 }
 
 .about-image img {
     width: 100%;
-    height: 100%;      /* Ocupa toda a altura do container pai */
-    object-fit: cover; /* Cobre a área sem distorcer (pode cortar) */
+    height: 100%;
+    object-fit: cover;
     display: block;
     border-radius: 20px;
 }
@@ -1151,9 +1090,9 @@ footer {
 }
 
 .about-text h2 {
-    font-size: 2.8rem;
-    color: #222;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #222;
 }
 
 .about-text h2 span {
@@ -1182,12 +1121,35 @@ footer {
     margin-bottom: 10px;
 }
 
+.about-text .missao-visao-titulo {
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: 700;
+    margin: 25px 0 10px;
+    position: relative;
+    padding-left: 15px;
+    border-left: 4px solid #4361ee;
+}
+
+.about-text .azul {
+    color: #4361ee;
+    font-weight: 600;
+}
+
+.about-text .negrito {
+    font-weight: 700;
+    color: #222;
+}
+
 @media (max-width: 768px) {
     .about-text h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     .about-text h3 {
         font-size: 1.5rem;
+    }
+    .about-text .missao-visao-titulo {
+        font-size: 1.3rem;
     }
 }
 
@@ -1259,7 +1221,7 @@ footer {
     }
 }
 
-/* ====== ESTATÍSTICAS COM ÍCONES EM CARDS TRANSPARENTES ====== */
+/* ====== ESTATÍSTICAS ====== */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1326,58 +1288,7 @@ footer {
     }
 }
 
-/* ====== ESTILOS PARA A SEÇÃO QUEM SOMOS ====== */
-.about-text {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #444;
-}
-
-.about-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #222;
-}
-
-.about-text h2 span {
-    color: #4361ee;
-}
-
-.about-text h3.missao-visao-titulo {
-    font-size: 1.5rem;
-    color: #222;
-    font-weight: 700;
-    margin: 25px 0 10px;
-    position: relative;
-    padding-left: 15px;
-    border-left: 4px solid #4361ee;
-}
-
-.about-text p {
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-
-.about-text .azul {
-    color: #4361ee;
-    font-weight: 600;
-}
-
-.about-text .negrito {
-    font-weight: 700;
-    color: #222;
-}
-
-@media (max-width: 768px) {
-    .about-text h2 {
-        font-size: 2rem;
-    }
-    .about-text h3.missao-visao-titulo {
-        font-size: 1.3rem;
-    }
-}
-
-/* ====== NOSSA EQUIPE - GRID RESPONSIVO ====== */
+/* ====== NOSSA EQUIPE ====== */
 .equipe-section {
     padding: 80px 5%;
     background: #f9f9f9;
@@ -1452,7 +1363,7 @@ footer {
     }
 }
 
-/* ====== HERO FULLSCREEN (ÍNDICE) - MESMO TAMANHO DAS OUTRAS PÁGINAS ====== */
+/* ====== HERO FULLSCREEN (ÍNDICE) ====== */
 .hero-full {
     position: relative;
     width: 100%;
@@ -1564,7 +1475,7 @@ footer {
     }
 }
 
-/* ====== SEÇÃO NOSSOS MATERIAIS ====== */
+/* ====== SEÇÃO NOSSOS MATERIAIS (PÁGINA INICIAL) ====== */
 .materiais-section {
     padding: 80px 5%;
     background-color: #f9f9f9;
@@ -1738,10 +1649,6 @@ footer {
     }
 }
 
-/* ====== WHATSAPP FLOATING BUTTON ====== */
-
-
-
 /* ====== PÁGINA CATÁLOGO ====== */
 .catalogo-page {
     padding: 60px 5%;
@@ -1756,7 +1663,6 @@ footer {
     align-items: flex-start;
 }
 
-/* Sidebar de categorias */
 .catalogo-sidebar {
     flex: 0 0 280px;
     background: white;
@@ -1815,7 +1721,6 @@ footer {
     font-weight: 600;
 }
 
-/* Área de produtos */
 .catalogo-produtos {
     flex: 1;
     min-width: 0;
@@ -1859,52 +1764,12 @@ footer {
     transform: scale(1.05);
 }
 
-/* Grelha de produtos (reutiliza o estilo do index, mas com 3 colunas) */
 .produtos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-/* Reaproveita o estilo de .material-card que já existe */
-.material-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.material-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(67, 97, 238, 0.1);
-}
-
-.material-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.material-card .card-body {
-    padding: 15px;
-    text-align: center;
-}
-
-.material-card h4 {
-    color: #222;
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.material-card p {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* ===== RESPONSIVIDADE DO CATÁLOGO ===== */
 @media (max-width: 992px) {
     .catalogo-container {
         flex-direction: column;
@@ -1967,7 +1832,6 @@ footer {
     }
 }
 
-
 /* ====== PAGINAÇÃO ====== */
 .paginacao {
     display: flex;
@@ -2005,7 +1869,6 @@ footer {
     color: #333;
     font-weight: 500;
 }
-
 
 /* ====== CATEGORIAS EM DOIS NÍVEIS ====== */
 .categoria-nivel {
@@ -2065,8 +1928,6 @@ footer {
     color: #4361ee;
     border-left-color: #4361ee;
 }
-
-
 
 /* ====== MODAL DE FICHA TÉCNICA ====== */
 .modal {
@@ -2202,11 +2063,7 @@ footer {
     }
 }
 
-
-
-/* ====== Mensagem de sucesso ====== */
-
-
+/* ====== MENSAGEM DE SUCESSO DO FORMULÁRIO ====== */
 .form-mensagem {
     margin-top: 20px;
     text-align: center;
