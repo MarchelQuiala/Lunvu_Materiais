@@ -548,6 +548,8 @@ section {
 /* ==================== */
 /* FOOTER E NEWSLETTER */
 /* ==================== */
+
+/* Newsletter - Desktop (lado a lado) */
 .footer-newsletter {
     background: linear-gradient(135deg, #2a3f8f, #1b2b5e);
     padding: 60px 5%;
@@ -557,27 +559,37 @@ section {
 }
 
 .newsletter-container {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.newsletter-container h3 {
+.newsletter-text {
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.newsletter-text h3 {
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: 700;
 }
 
-.newsletter-container p {
+.newsletter-text p {
     font-size: 1.1rem;
-    margin-bottom: 30px;
     opacity: 0.9;
+    margin: 0;
 }
 
 .newsletter-form {
+    flex: 1 1 400px;
     display: flex;
     gap: 10px;
     max-width: 500px;
-    margin: 0 auto;
 }
 
 .newsletter-form input {
@@ -587,6 +599,7 @@ section {
     border-radius: 50px;
     font-size: 1rem;
     outline: none;
+    min-width: 200px;
 }
 
 .newsletter-form button {
@@ -606,6 +619,7 @@ section {
     transform: scale(1.05);
 }
 
+/* Footer */
 footer {
     background: #1a1a1a;
     color: #bbb;
@@ -613,12 +627,29 @@ footer {
     font-size: 0.95rem;
 }
 
+/* Footer grid - 4 colunas em desktop */
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+/* Tablets (≤992px) - 2 colunas */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Celulares (≤768px) - 1 coluna */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
 
 .footer-col h4 {
@@ -871,16 +902,6 @@ footer {
     .logo-text {
         font-size: 22px;
     }
-    .footer-grid {
-        gap: 30px;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-bottom-links {
-        justify-content: center;
-    }
 
     /* Ajustes hero index */
     .hero-full {
@@ -913,7 +934,7 @@ footer {
 
     /* Ajustes para hero das demais páginas (serviços, contacto, sobre, catálogo) */
     .hero-historia {
-        height: 400px; /* altura adequada */
+        height: 400px;
     }
     .hero-historia .hero-historia-conteudo {
         top: 50%;
@@ -921,41 +942,73 @@ footer {
         padding: 0 10px;
     }
     .hero-historia .hero-historia-conteudo h1 {
-        font-size: 2.5rem; /* aumentado para melhor legibilidade */
+        font-size: 2.5rem;
         margin-bottom: 10px;
     }
     .hero-historia .hero-historia-conteudo p {
-        font-size: 1.2rem; /* aumentado */
+        font-size: 1.2rem;
         margin-bottom: 15px;
     }
 
-    /* Newsletter mobile */
+    /* ===== NEWSLETTER MOBILE CORRIGIDA ===== */
     .newsletter-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 20px 0;
+        padding: 20px 5%;
     }
+
+    .newsletter-text h3 {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    .newsletter-text p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
     .newsletter-form {
         width: 100%;
+        max-width: 320px;
         flex-direction: column;
-        gap: 10px;
-        max-width: 100%;
+        gap: 8px;
+        margin: 0 auto;
+        /* Anula propriedades do desktop */
+        flex: none;
     }
+
     .newsletter-form input {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-        padding: 12px 20px;
+        width: 100%;
+        /* Anula propriedades do desktop */
+        flex: none;
+        min-width: 0;
+        padding: 10px 15px;
+        font-size: 0.9rem;
         border-radius: 50px;
-        margin-right: 0;
+        border: none;
+        outline: none;
     }
+
     .newsletter-form button {
         width: 100%;
-        max-width: 100%;
-        padding: 12px 20px;
-        border-radius: 50px;
+        /* Anula propriedades do desktop */
+        flex: none;
+        padding: 10px 15px;
+        font-size: 0.9rem;
         white-space: normal;
+        border-radius: 50px;
+        border: none;
+        background: white;
+        color: #2a3f8f;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .newsletter-form button:hover {
+        background: #f0f0f0;
+        transform: scale(1.02);
     }
 }
 
@@ -973,10 +1026,10 @@ footer {
         font-size: 1rem;
     }
     .hero-historia .hero-historia-conteudo h1 {
-        font-size: 2rem; /* aumentado */
+        font-size: 2rem;
     }
     .hero-historia .hero-historia-conteudo p {
-        font-size: 1.1rem; /* aumentado */
+        font-size: 1.1rem;
     }
     section {
         padding: 70px 5%;
@@ -994,93 +1047,6 @@ footer {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #4361ee;
-}
-
-/* ====== FOOTER EM LINHA ÚNICA ====== */
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.footer-col {
-    flex: 1 1 200px;
-    min-width: 180px;
-}
-
-@media (min-width: 1200px) {
-    .footer-grid {
-        flex-wrap: nowrap;
-    }
-}
-
-/* ====== NEWSLETTER HORIZONTAL ====== */
-.footer-newsletter {
-    background: linear-gradient(135deg, #2a3f8f, #1b2b5e);
-    padding: 40px 5%;
-    color: white;
-}
-
-.newsletter-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.newsletter-text {
-    flex: 1 1 300px;
-}
-
-.newsletter-text h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.newsletter-text p {
-    font-size: 1rem;
-    opacity: 0.9;
-    margin: 0;
-}
-
-.newsletter-form {
-    flex: 1 1 400px;
-    display: flex;
-    gap: 10px;
-    max-width: 500px;
-}
-
-.newsletter-form input {
-    flex: 1;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    outline: none;
-    min-width: 200px;
-}
-
-.newsletter-form button {
-    background: white;
-    color: #2a3f8f;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    white-space: nowrap;
-}
-
-.newsletter-form button:hover {
-    background: #f0f0f0;
-    transform: scale(1.05);
 }
 
 /* ====== PÁGINA SOBRE COM IMAGEM ====== */
