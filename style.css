@@ -912,6 +912,20 @@ footer {
         padding: 10px 20px;
     }
 
+    /* Ajustes para hero das demais páginas (serviços, contacto, sobre, catálogo) */
+    .hero-historia {
+        height: 400px; /* aumenta a altura para dar mais espaço */
+    }
+    .hero-historia .hero-historia-conteudo {
+        top: 55%; /* desce um pouco o texto para igualar ao index */
+    }
+    .hero-historia .hero-historia-conteudo h1 {
+        font-size: 2.5rem; /* já existente */
+    }
+    .hero-historia .hero-historia-conteudo p {
+        font-size: 1.2rem; /* já existente */
+    }
+
     /* Newsletter mobile */
     .newsletter-container {
         flex-direction: column;
