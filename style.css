@@ -914,16 +914,20 @@ footer {
 
     /* Ajustes para hero das demais páginas (serviços, contacto, sobre, catálogo) */
     .hero-historia {
-        height: 400px; /* aumenta a altura para dar mais espaço */
+        height: 400px; /* altura adequada */
     }
     .hero-historia .hero-historia-conteudo {
-        top: 55%; /* desce um pouco o texto para igualar ao index */
+        top: 50%;
+        width: 95%;
+        padding: 0 10px;
     }
     .hero-historia .hero-historia-conteudo h1 {
-        font-size: 2.5rem; /* já existente */
+        font-size: 2.2rem;
+        margin-bottom: 10px;
     }
     .hero-historia .hero-historia-conteudo p {
-        font-size: 1.2rem; /* já existente */
+        font-size: 1.1rem;
+        margin-bottom: 15px;
     }
 
     /* Newsletter mobile */
@@ -962,6 +966,18 @@ footer {
     }
     .hero-content h1 {
         font-size: 1.8rem;
+    }
+    .hero-full-conteudo h1 {
+        font-size: 1.8rem;
+    }
+    .hero-full-conteudo p {
+        font-size: 1rem;
+    }
+    .hero-historia .hero-historia-conteudo h1 {
+        font-size: 1.8rem;
+    }
+    .hero-historia .hero-historia-conteudo p {
+        font-size: 1rem;
     }
     section {
         padding: 70px 5%;
@@ -1653,13 +1669,29 @@ footer {
 
 @media (max-width: 768px) {
     .hero-historia {
-        height: 350px;
+        height: 400px; /* altura ajustada */
+    }
+    .hero-historia .hero-historia-conteudo {
+        top: 50%;
+        width: 95%;
+        padding: 0 10px;
     }
     .hero-historia .hero-historia-conteudo h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
     }
     .hero-historia .hero-historia-conteudo p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-historia .hero-historia-conteudo h1 {
+        font-size: 1.8rem;
+    }
+    .hero-historia .hero-historia-conteudo p {
+        font-size: 1rem;
     }
 }
 
