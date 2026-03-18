@@ -974,13 +974,11 @@ footer {
         flex-direction: column;
         gap: 8px;
         margin: 0 auto;
-        /* Anula propriedades do desktop */
         flex: none;
     }
 
     .newsletter-form input {
         width: 100%;
-        /* Anula propriedades do desktop */
         flex: none;
         min-width: 0;
         padding: 10px 15px;
@@ -992,7 +990,6 @@ footer {
 
     .newsletter-form button {
         width: 100%;
-        /* Anula propriedades do desktop */
         flex: none;
         padding: 10px 15px;
         font-size: 0.9rem;
@@ -1536,11 +1533,33 @@ footer {
     box-shadow: 0 15px 30px rgba(67, 97, 238, 0.1);
 }
 
+/* ===== AJUSTE PROFISSIONAL DAS IMAGENS DOS CARDS ===== */
 .material-card img {
     width: 100%;
-    height: 200px;
+    height: 180px;          /* altura ligeiramente menor em desktop */
     object-fit: cover;
     display: block;
+}
+
+/* Tablets: altura intermédia */
+@media (max-width: 992px) {
+    .material-card img {
+        height: 160px;
+    }
+}
+
+/* Mobile médio: um pouco maior para aproveitar largura */
+@media (max-width: 768px) {
+    .material-card img {
+        height: 200px;
+    }
+}
+
+/* Mobile pequeno: volta a reduzir para equilíbrio */
+@media (max-width: 576px) {
+    .material-card img {
+        height: 180px;
+    }
 }
 
 .material-card .card-body {

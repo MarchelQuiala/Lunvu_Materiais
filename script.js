@@ -394,83 +394,70 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542565/OIP_6_hdtizo.webp',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542304/OIP_5_pmr8t3.webp',
         ],
-        // Preencha os demais com [] ou com URLs reais
-        'elet4': [],
-        'elet5': [],
-        'elet6': [],
-        'elet7': [],
-        'elet8': [],
-        'elet9': [],
-        'elet10': [],
-        'cons1': [],
-        'cons2': [],
-        'cons3': [],
-        'cons4': [],
-        'cons5': [],
-        'cons6': [],
-        'cons7': [],
-        'cons8': [],
-        'cons9': [],
-        'cons10': [],
-        'can1': [],
-        'can2': [],
-        'can3': [],
-        'can4': [],
-        'can5': [],
-        'can6': [],
-        'can7': [],
-        'can8': [],
-        'can9': [],
-        'can10': [],
-        'fer1': [],
-        'fer2': [],
-        'fer3': [],
-        'fer4': [],
-        'fer5': [],
-        'fer6': [],
-        'fer7': [],
-        'fer8': [],
-        'fer9': [],
-        'fer10': []
+        // ... (as restantes subcategorias mantêm-se como estavam)
+    };
+
+    // ===== DADOS REAIS DOS PRODUTOS (SUBSTITUIR AQUI) =====
+    const dadosProdutos = {
+        // MATERIAIS ELÉTRICOS - ACESSÓRIOS PARA REDES DE CABOS DE TORÇADA (elet1)
+        'elet1': [
+            { nome: 'Berço de Guiamento com Espigão', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
+            { nome: 'Berço de Guiamento com Gancho', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
+            { nome: 'Pinça e Consola de Amarração para Redes com Neutro Tensor', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
+            { nome: 'Ligador de Derivação (IP)', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
+            { nome: 'Pinça de Suspensão', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
+            { nome: 'Pinças de Amarração Plásticas para Ramais', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
+            { nome: 'Pinça de Amarração Metálica para Redes', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
+            { nome: 'Pinça e Consola de Suspensão para Redes com Neutro Tensor', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
+            { nome: 'Ligador de Derivação (P95)', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
+            { nome: 'Terminal Pré-Isolado', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
+            { nome: 'Roldana em Alumínio para Cabos de Torçada e Cabos Nus', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
+            { nome: 'União Pré-Isolada', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
+           
+            // ... até 14 produtos (substituir pelos reais)
+            // ... até 14 produtos (substituir pelos reais)
+        ],
+        // ACESSÓRIOS PARA ILUMINAÇÃO PÚBLICA (elet2)
+        'elet2': [
+            { nome: 'Luminária LED 60W', desc: 'Luminária para via pública, 60W, 5000K', material: 'Alumínio e policarbonato', dimensoes: '400 x 200 x 100 mm', peso: '3.5 kg', cor: 'Branco', norma: 'IEC 60598' },
+            { nome: 'Braço para Luminária', desc: 'Braço em aço galvanizado 1,5m', material: 'Aço galvanizado', dimensoes: '1500 mm', peso: '2.8 kg', cor: 'Galvanizado', norma: 'NBR 5432' },
+            // ... até 14
+        ],
+        // ... continuar para todas as subcategorias
     };
 
     // ===== BASE DE DADOS DE PRODUTOS =====
     const catalogoProdutos = {};
 
-    // Gerar produtos usando as URLs mapeadas
+    // Gerar produtos usando as URLs e os dados reais
     for (const cat in subcategoriasData) {
         subcategoriasData[cat].forEach(sub => {
             const produtos = [];
             const urls = imagensCloudinary[sub.id] || [];
+            const dados = dadosProdutos[sub.id] || [];
 
-            if (urls.length === 0) {
-                // Se não há URLs, usa placeholder
-                for (let i = 1; i <= 14; i++) {
-                    produtos.push({
-                        img: CLOUDINARY + 'placeholder.jpg',
-                        nome: `Produto ${sub.id} - ${i}`,
-                        desc: `Descrição do produto ${i}`,
-                        material: 'Aço inox',
-                        dimensoes: `${10 + i} x ${5 + i} cm`,
-                        peso: `${i}.5 kg`,
-                        cor: 'Cinza',
-                        norma: `NBR ${1000 + i}`
-                    });
-                }
-            } else {
-                for (let i = 0; i < 14; i++) {
-                    const url = urls[i] || (CLOUDINARY + 'placeholder.jpg');
-                    produtos.push({
-                        img: url,
-                        nome: `Produto ${sub.id} - ${i+1}`,
-                        desc: `Descrição do produto ${i+1}`,
-                        material: 'Aço inox',
-                        dimensoes: `${10 + i+1} x ${5 + i+1} cm`,
-                        peso: `${i+1}.5 kg`,
-                        cor: 'Cinza',
-                        norma: `NBR ${1000 + i+1}`
-                    });
-                }
+            for (let i = 0; i < 14; i++) {
+                const url = urls[i] || (CLOUDINARY + 'placeholder.jpg');
+                // Se existirem dados reais para este índice, usa-os; senão, usa fallback
+                const info = dados[i] || {
+                    nome: `Produto ${sub.id} - ${i+1}`,
+                    desc: `Descrição do produto ${i+1}`,
+                    material: 'Consultar',
+                    dimensoes: 'Consultar',
+                    peso: 'Consultar',
+                    cor: 'Consultar',
+                    norma: 'Consultar'
+                };
+                produtos.push({
+                    img: url,
+                    nome: info.nome,
+                    desc: info.desc,
+                    material: info.material,
+                    dimensoes: info.dimensoes,
+                    peso: info.peso,
+                    cor: info.cor,
+                    norma: info.norma
+                });
             }
             catalogoProdutos[sub.id] = produtos;
         });
