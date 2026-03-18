@@ -1536,30 +1536,65 @@ footer {
 /* ===== AJUSTE PROFISSIONAL DAS IMAGENS DOS CARDS ===== */
 .material-card img {
     width: 100%;
-    height: 180px;          /* altura ligeiramente menor em desktop */
-    object-fit: cover;
+    height: auto;
+    max-height: 140px;      /* reduzido de 150px para 140px */
+    object-fit: contain;
     display: block;
+    margin: 0 auto;
 }
 
-/* Tablets: altura intermédia */
+/* Tablets: altura máxima ligeiramente menor */
 @media (max-width: 992px) {
     .material-card img {
-        height: 160px;
+        max-height: 130px;  /* reduzido de 140px para 130px */
     }
 }
 
 /* Mobile médio: um pouco maior para aproveitar largura */
 @media (max-width: 768px) {
     .material-card img {
-        height: 200px;
+        max-height: 150px;  /* reduzido de 160px para 150px */
     }
 }
 
-/* Mobile pequeno: volta a reduzir para equilíbrio */
+/* Mobile pequeno: volta a reduzir */
 @media (max-width: 576px) {
     .material-card img {
-        height: 180px;
+        max-height: 130px;  /* reduzido de 140px para 130px */
     }
+}
+
+.material-card .card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.material-card h4 {
+    color: #222;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.material-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.ver-catalogo-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-catalogo {
+    padding: 15px 45px;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.2);
+}
+
+.btn-catalogo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(67, 97, 238, 0.3);
 }
 
 .material-card .card-body {
