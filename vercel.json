@@ -1,3 +1,9 @@
 {
-   " cleanUrl": true
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/catalogo", "dest": "/catalogo.html" },
+    { "src": "/contacto", "dest": "/contacto.html" },
+    { "src": "/servico", "dest": "/servico.html" },
+    { "src": "/sobre", "dest": "/sobre.html" }
+  ]
 }
