@@ -2,8 +2,8 @@
   "routes": [
     { "src": "/", "dest": "/index.html" },
     { "src": "/catalogo", "dest": "/catalogo.html" },
-    { "src": "/contacto", "dest": "/contacto.html" },
-    { "src": "/servico", "dest": "/servico.html" },
+    { "src": "/contato", "dest": "/contato.html" },
+    { "src": "/servicos", "dest": "/servicos.html" },
     { "src": "/sobre", "dest": "/sobre.html" }
   ]
 }
