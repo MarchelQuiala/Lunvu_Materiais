@@ -1296,18 +1296,32 @@ footer {
 
 .membro {
     text-align: center;
+    
 }
 
+/* Cards quadrados - sem borda circular */
 .membro img {
     width: 100%;
     max-width: 180px;
     aspect-ratio: 1/1;
-    border-radius: 50%;
+    border-radius: 0;          /* quadrado perfeito (sem arredondamento) */
     object-fit: cover;
-    margin-bottom: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    object-position: center 35%;   /* ajusta o foco para não cortar a cabeça */
 }
+
+/* Se quiser cantos levemente arredondados (opcional) */
+.membro img {
+    border-radius: 8px;        /* pequeno arredondamento, ainda sim quadrado */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .membro img {
+        max-width: 150px;
+    }
+}
+
+
 
 .membro img:hover {
     transform: scale(1.05);
