@@ -394,6 +394,22 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542565/OIP_6_hdtizo.webp',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542304/OIP_5_pmr8t3.webp',
         ],
+                'elet4': [
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560110/para-raios-ponta-franklin-600x600_wz5s2u.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560108/jobasi-zeus-electron-zeus-sigma-600x600_y9cxbh.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445054/T9_etjntf.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445054/T11_u0as1w.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445053/T10_rjhcp1.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445053/T4_wa2ik0.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445053/T8_dx4xsx.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445053/T5_ckqufe.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445051/T2_n9fsvc.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445054/T12_hojekd.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772541594/T14_hezib1.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772541594/T15_moemy1.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542565/OIP_6_hdtizo.webp',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542304/OIP_5_pmr8t3.webp',
+             ],
         // ... (as restantes subcategorias mantêm-se como estavam)
     };
 
