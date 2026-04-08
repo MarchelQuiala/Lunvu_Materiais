@@ -405,10 +405,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560031/9123455220-Ligador-de-Condutor-Redondo-para-Haste-Captora-500x500_b23var.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560031/9113100595-ABRACADEIRA-PARA-CABO-PARA-RAIOS--500x500_fpdtnx.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560138/uniao-fixacao-mastro-600x600_1_wfgdfv.png',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772541594/T14_hezib1.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772541594/T15_moemy1.png',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542565/OIP_6_hdtizo.webp',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542304/OIP_5_pmr8t3.webp',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775647709/Acessorios-Caso-Isojo-500x500_zqhfq5.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775647709/Ligador-Amovivel-500x500_jksskk.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775647708/abracadeira-chumbadouro-500x500_r1g8lo.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775647709/suporte-conico-ligador-500x500_fmca4q.jpg',
              ],
         // ... (as restantes subcategorias mantêm-se como estavam)
     };
