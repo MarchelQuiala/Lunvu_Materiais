@@ -410,6 +410,16 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775647708/abracadeira-chumbadouro-500x500_r1g8lo.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775647709/suporte-conico-ligador-500x500_fmca4q.jpg',
              ],
+           'elet5':[
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560033/Cabo-de-Aluminio-8mm-500x500_jatyi4.png',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-aco-galvanizado-jobasi-600x600_elyuid.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-cobre-estanhado-jobasi-600x600_b4ithi.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-de-aco-inoxidavel-jobasi-600x600_sjfqti.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-cobre-macico-jobasi-600x600_i5t0dp.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560031/cabo-aco-cobreado-jobasi-600x600_eeyarc.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560107/fita-aco-inox-jobasi-600x600_ubttgw.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560106/fita-aco-galvanizado-jobasi-1-600x600_ru7i2q.jpg'
+           ]
         // ... (as restantes subcategorias mantêm-se como estavam)
     };
 
