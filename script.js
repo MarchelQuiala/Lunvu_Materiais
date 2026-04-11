@@ -417,8 +417,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-de-aco-inoxidavel-jobasi-600x600_sjfqti.jpg',
                         'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-cobre-macico-jobasi-600x600_i5t0dp.jpg',
                         'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560031/cabo-aco-cobreado-jobasi-600x600_eeyarc.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1772444998/I16_k5qtkp.webp',
                         'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560107/fita-aco-inox-jobasi-600x600_ubttgw.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560106/fita-aco-galvanizado-jobasi-1-600x600_ru7i2q.jpg'
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560106/fita-aco-galvanizado-jobasi-1-600x600_ru7i2q.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560035/electrodo-2roscas-600x600_ymkoq1.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560105/electrodo-inox-galv_awufgh.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/electrodo-sem-rocas_snpx0v.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/electrodo-1rosca-600x600_edhalp.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/tranca-plana-cobre-estanhada-600x600_e9hbuo.jpg',
            ]
         // ... (as restantes subcategorias mantêm-se como estavam)
     };
