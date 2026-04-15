@@ -460,7 +460,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/ligador-de-terra-para-seccionadores-d60d116-600x600_imk5kd.jpg',
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/ligador-para-bornes-de-transformador-tipo-grampo-600x600_gubhti.jpg',
 
-            ]
+            ],
+              'elet7': [
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/Perfil-L70-2-furos-o18-500x500_atsew1.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/p-cabo-de-terra-aereo-em-alonga-02.202.02-500x500_mlkt1b.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/Perfil-L60-2-Furos-D18-500x500_drkbjf.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267148/PAG-103-02.400.01-500x500_hfoz2m.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267148/PAG-93-02.300.01-500x500_jcoifw.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267148/PAG-84-02.209.01-500x500_epwaqc.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-64-02.110.01-500x500_cggft5.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-65-02.201.01-500x500_wfnvdw.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/06.900.01-PAG-258-2-500x500_m5wngf.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-57-02.108.01-500x500_wtc4i9.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/PAG-41-02.104.01-03-500x500_bmsze0.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/2-Rasgos-de-22-02.213.01-03-500x500_q9aaof.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/1-Furos-o18-02.202.01-500x500_kysjp7.png'
+              ]
+
         // ... (as restantes subcategorias mantêm-se como estavam)
     };
 
