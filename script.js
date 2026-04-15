@@ -439,6 +439,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/9113100458-500x500_tgrfgm.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/9113100414-barra-terra-40x5x200-2isoladores-5parafusos-ligacao-500x500_c1x0mj.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264104/barra-colectora-de-terras-30x5mm-para-electrodo-ft-600x600_pyrwir.jpg',  
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/barra-colectora-de-terras-inox-200X100X3-com-16-furos-500x500_cmifc4.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/Barra-CU-9113100464-500x500_kgcafy.png',
 
 
            ]
