@@ -443,7 +443,24 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/Barra-CU-9113100464-500x500_kgcafy.png',
 
 
-           ]
+           ],
+            'elet6': [
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Ligadores-de-Terra-600x600_ocvff4.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/terminal-de-bt-para-transformador-de-potencia-600x600_soqbg2.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/grampos-de-conexao-para-estrutura-e-cabo-600x600_o9oksg.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Ligador-Dilatacao-90-Bimetalico-9113451451-1-500x500_xlvxlk.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Abrac%CC%A7adeiras-com-Alheta-600x600_v2en5g.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/ligador-paralelo-para-condutores-de-cobre-nu-600x600_nddlcz.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/Ligador-de-dilatacao-90-com-borne-9113451450-500x500_ojytm9.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/ligadores-para-cabo-barra-terra-com-e-sem-alheta-600x600_cwqfoc.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266032/4-600x600_hvlf0n.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266032/9113451180-500x500_bckibe.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/ligador-para-barra-de-terra-lbt-1-600x600_ym79ga.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/ligador-de-cobre-em-c-2--600x600_opn3wc.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/ligador-de-terra-para-seccionadores-d60d116-600x600_imk5kd.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/ligador-para-bornes-de-transformador-tipo-grampo-600x600_gubhti.jpg',
+
+            ]
         // ... (as restantes subcategorias mantêm-se como estavam)
     };
 
