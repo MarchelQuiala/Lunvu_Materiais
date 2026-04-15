@@ -474,7 +474,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-57-02.108.01-500x500_wtc4i9.png',
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/PAG-41-02.104.01-03-500x500_bmsze0.png',
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/2-Rasgos-de-22-02.213.01-03-500x500_q9aaof.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/1-Furos-o18-02.202.01-500x500_kysjp7.png'
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/1-Furos-o18-02.202.01-500x500_kysjp7.png',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268118/1-Furo-02.200.01-04--500x500_maancu.png',
               ]
 
         // ... (as restantes subcategorias mantêm-se como estavam)
