@@ -461,7 +461,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/ligador-para-bornes-de-transformador-tipo-grampo-600x600_gubhti.jpg',
 
             ],
-              'elet7': [
+              'elet8': [
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/Perfil-L70-2-furos-o18-500x500_atsew1.png',
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/p-cabo-de-terra-aereo-em-alonga-02.202.02-500x500_mlkt1b.png',
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/Perfil-L60-2-Furos-D18-500x500_drkbjf.png',
