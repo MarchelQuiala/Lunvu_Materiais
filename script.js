@@ -375,6 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270237/images_16_qn20ox.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776272347/images_26_wjc93n.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776271376/images_25_biwgrf.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776271160/images_24_qkvvmn.jpg',
  
         ],
         'elet3': [
