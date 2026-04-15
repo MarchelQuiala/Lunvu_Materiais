@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
            ],
-            'elet6': [
+            'elet7': [
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Ligadores-de-Terra-600x600_ocvff4.png',
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/terminal-de-bt-para-transformador-de-potencia-600x600_soqbg2.jpg',
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/grampos-de-conexao-para-estrutura-e-cabo-600x600_o9oksg.png',
