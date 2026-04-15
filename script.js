@@ -373,6 +373,8 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270242/transferir_24_bc4qn1.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270234/images_11_onceqn.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270237/images_16_qn20ox.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776271376/images_25_biwgrf.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776271160/images_24_qkvvmn.jpg',
       
         ],
         'elet3': [
