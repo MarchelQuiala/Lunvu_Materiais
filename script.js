@@ -425,6 +425,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/electrodo-sem-rocas_snpx0v.jpg',
                         'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/electrodo-1rosca-600x600_edhalp.jpg',
                         'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/tranca-plana-cobre-estanhada-600x600_e9hbuo.jpg',
+           ],
+           'elet6': [
+
            ]
         // ... (as restantes subcategorias mantêm-se como estavam)
     };
