@@ -302,8 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { id: 'elet6', nome: '6. BARRAS COLECTORAS' },
             { id: 'elet7', nome: '7. SUBESTAÇÕES' },
             { id: 'elet8', nome: '8. FERROVIAS' },
-            { id: 'elet9', nome: '9. SOLDADURAS' },
-            { id: 'elet10', nome: '10. TERMINAIS, UNIÕES E BORNES' },
+            { id: 'elet9', nome: '9. TERMINAIS, UNIÕES E BORNES' },
         ],
         construcao: [
             { id: 'cons1', nome: '1. CIMENTOS E ARGAMASSAS' },
@@ -476,7 +475,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/2-Rasgos-de-22-02.213.01-03-500x500_q9aaof.png',
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/1-Furos-o18-02.202.01-500x500_kysjp7.png',
                 'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268118/1-Furo-02.200.01-04--500x500_maancu.png',
-              ]
+              ],
+                'elet9': [
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cravar-cobre-bt-600x600_x3qlkp.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/tcjobasi-500x500_bncho5.png',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268961/terminaldinjobasi-500x500_wkwnua.png',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cobre-macico-de-cravar-mt-600x600_cyzkuc.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268958/jw-500x500_scid4y.png',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/Terminal-cravar-Cobre-90graus-500x500_mohirh.png',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268963/unioes-bimet-mt-600x600_hu2icp.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268958/terminal-bimetalico-tbi-600x600_f5krqe.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268959/terminal-concentrico-angulo-recto-600x600_g5xvid.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268963/uniao-de-cravar-de-cobre-bt-600x600_ac0pz5.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/Terminal-Cravar-Ponteira-500x500_ubmzyk.png',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268961/uniao-concentrica-simples-600x600_vqvfdc.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/Terminal-Liga-Unica-Jobasi-500x500_j4llga.png',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cobre-macico-de-cravar-mt-600x600_cyzkuc.jpg',
+                ]
+
 
         // ... (as restantes subcategorias mantêm-se como estavam)
     };
