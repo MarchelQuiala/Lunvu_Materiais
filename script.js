@@ -427,6 +427,19 @@ document.addEventListener('DOMContentLoaded', function() {
                         'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/tranca-plana-cobre-estanhada-600x600_e9hbuo.jpg',
            ],
            'elet6': [
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/9113101482-BARRA-TERRA-CU-40X5X430-CAMOVIVEL-4-2-500x500_ngqxk1.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/9113100459-Barra-Coletora-500x500_wai0hv.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/9113100756-BARRA-COLECTORA-DE-TERRAS-40x5x220-S_-ISOLADOR-500x500_c2l9nt.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264107/barradecobre-500x500_bzshrr.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/9113100477-500x500_adrtf1.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/9113100479-500x500_bescqa.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/Barra-com-ligador-amovivel-500x500_hzftxp.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/9113100478-BARRA-CU-30x5x190-C_BARRA-AMOV.-C_3-SM35-1E1S-500x500_xb9tn9.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/9113100410-RENDER-S.PARAFUSOS-500x500_mehkrg.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/9113100458-500x500_tgrfgm.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/9113100414-barra-terra-40x5x200-2isoladores-5parafusos-ligacao-500x500_c1x0mj.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264104/barra-colectora-de-terras-30x5mm-para-electrodo-ft-600x600_pyrwir.jpg',  
+
 
            ]
         // ... (as restantes subcategorias mantêm-se como estavam)
