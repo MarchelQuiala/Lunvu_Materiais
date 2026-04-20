@@ -502,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dadosProdutos = {
         // MATERIAIS ELÉTRICOS - ACESSÓRIOS PARA REDES DE CABOS DE TORÇADA (elet1)
         'elet1': [
-            { nome: 'Berço de Guiamento com Espigão', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
+            { nome: 'Berço de Guiamento com Espigão', desc: 'Berço de Guiamento', Material: 'Espigão em aço electrozincado (AZ) ou galvanizado (AG)', Código: '9113000110', Tipo: 'BE AZ 16', Secção: '2×6 – 5×16' },
             { nome: 'Berço de Guiamento com Gancho', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
             { nome: 'Pinça e Consola de Amarração para Redes com Neutro Tensor', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
             { nome: 'Ligador de Derivação (IP)', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
