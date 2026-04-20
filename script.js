@@ -502,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dadosProdutos = {
         // MATERIAIS ELÉTRICOS - ACESSÓRIOS PARA REDES DE CABOS DE TORÇADA (elet1)
         'elet1': [
-            { nome: 'Berço de Guiamento com Espigão', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
+            { nome: 'Berço de Guiamento com Espigão', desc: 'Conector tipo cunha para cabos de alumínio', Material: 'Espigão em aço electrozincado (AZ) ou galvanizado (AG)', Código: '9113000110', Tipo: 'BE AZ 16', Secção: '26516' },
             { nome: 'Berço de Guiamento com Gancho', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
             { nome: 'Pinça e Consola de Amarração para Redes com Neutro Tensor', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
             { nome: 'Ligador de Derivação (IP)', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
@@ -544,20 +544,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     nome: `Produto ${sub.id} - ${i+1}`,
                     desc: `Descrição do produto ${i+1}`,
                     material: 'Consultar',
-                    dimensoes: 'Consultar',
-                    peso: 'Consultar',
-                    cor: 'Consultar',
-                    norma: 'Consultar'
+                  código: 'Consultar',
+                tipo: 'Consultar',
+                    secção: 'Consultar'
+                   
                 };
                 produtos.push({
                     img: url,
                     nome: info.nome,
                     desc: info.desc,
                     material: info.material,
-                    dimensoes: info.dimensoes,
-                    peso: info.peso,
-                    cor: info.cor,
-                    norma: info.norma
+                     código: info.código,
+                     tipo: info.tipo,
+                     secção: info.secção
+                    /*norma: info.norma*/
+                  
                 });
             }
             catalogoProdutos[sub.id] = produtos;
@@ -717,10 +718,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalNome = document.getElementById('modal-nome');
     const modalDesc = document.getElementById('modal-desc');
     const modalMaterial = document.getElementById('ft-material');
-    const modalDimensoes = document.getElementById('ft-dimensoes');
-    const modalPeso = document.getElementById('ft-peso');
-    const modalCor = document.getElementById('ft-cor');
-    const modalNorma = document.getElementById('ft-norma');
+    const modalDimensoes = document.getElementById('ft-código');
+    const modalPeso = document.getElementById('ft-tipo');
+    const modalCor = document.getElementById('ft-secção');
+    /*const modalNorma = document.getElementById('ft-norma');*/
     const modalOrcamento = document.getElementById('modal-orcamento');
     const modalClose = document.querySelector('.modal-close');
 
@@ -730,10 +731,10 @@ document.addEventListener('DOMContentLoaded', function() {
             modalNome.textContent = produto.nome;
             modalDesc.textContent = produto.desc;
             modalMaterial.textContent = produto.material || 'Consultar';
-            modalDimensoes.textContent = produto.dimensoes || 'Consultar';
-            modalPeso.textContent = produto.peso || 'Consultar';
-            modalCor.textContent = produto.cor || 'Consultar';
-            modalNorma.textContent = produto.norma || 'Consultar';
+            modalDimensoes.textContent = produto.código || 'Consultar';
+            modalPeso.textContent = produto.tipo || 'Consultar';
+            modalCor.textContent = produto.secção || 'Consultar';
+           /* modalNorma.textContent = produto.norma || 'Consultar'; */
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
