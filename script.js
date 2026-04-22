@@ -291,6 +291,279 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnProximo = document.getElementById('btnProximo');
     const paginaInfo = document.getElementById('paginaInfo');
 
+    // ===== DADOS TÉCNICOS PARA ELET1 (CADA PRODUTO COM SUA ESTRUTURA) =====
+    const dadosTecnicosElet1 = {
+        "Berço de Guiamento": {
+            aplicacao: "Fixação de cabos em superfícies planas (paredes, caixas de passagem) ou em estruturas metálicas que possuam furos de encaixe",
+            material: "Disponível em aço galvanizado (AG) para áreas externas ou eletrozincado (AZ) para ambientes internos",
+            colunas: ["Seção", "Código", "Tipo","Info"],
+            especificacoes: [
+                { secao: "2×6 – 5×16", codigo: "9113000110", tipo: "BE AZ 16", info: "com espigão" },
+                { secao: "2×6 – 5×16", codigo: "9113000111", tipo: "BE AZ 16", info: "com espigão" },
+                { secao: "4×25 – 4×70", codigo: "9123000131", tipo: "BE AG 70", info: "com espigão" },
+                { secao: "4×25 – 4×70", codigo: "9113000135", tipo: "BE AG 70", info: "com espigão" },
+                { secao: "2×6 – 5×16", codigo: "9123000120", tipo: "BG AI 16", info: "com gancho" },
+                { secao: "4×25 – 4×70", codigo: "9123000130", tipo: "BG AI 70", info: "com gancho" }
+            ]
+        },
+        "Ligadores de Derivação de Aperto Independente": {
+            aplicacao: "Instalação de linhas elétricas torcadas (cabos duplex, triplex, quadriplex) em postes ou fachadas",
+            material: "Normalmente combina um berço de plástico (para isolar e proteger o cabo) com um gancho de aço inox ou galvanizado (para resistência mecânica)",
+            colunas: ["Seção","Código", "Tipo"],
+            especificacoes: [
+                { secao: "10-25 mm²", codigo: "9123000440", tipo: "CPB 1/CT25" },
+                { secao: "16-95 mm²", codigo: "9123000450", tipo: "	CPB 1/CT70" },
+                { secao: "16-95 mm²", codigo: "9123000460", tipo: "	CPB 1/CT70" }
+            ]
+        },
+        "Pinça e Consola de Amarração para Redes com Neutro Tensor": {
+            aplicacao: "Amarração do cabo neutro tensor em redes de torçada do tipo francês, A Pinça de Amarração é presa ao poste através da Consola de Amarração e a Consola de Amarração efectua a sua fixação ao poste por intermédio de 2 parafusos M16 ou fita de aço inox",
+            material: "Corpo da Pinça de Amarração PA1500 em liga de alumínio de alta resistência mecânica. Cunhas em material plástico isolante de alta resistência mecânica, climática e dieléctrica. Espia de amarração flexível em aço inox, provida de uma sela amovível em material isolante, Corpo da Consola de Amarração CA1500 em alumínio de alta resistência mecânica.",
+            colunas: ["Código", "Tipo", "Designação", "Info"],
+            especificacoes: [
+                { codigo: "9115000", tipo: "PA1500", designacao: "Pinça Amarração 54,6 mm²", info: "1 Pinça" },
+                { codigo: "9115000015", tipo: "CA1500", designacao: "Consola Amarração", info: "1 Consola" },
+                { codigo: "9115000035", tipo: "PA1CA", designacao: "Conjunto Amarração SIMPLES", info: "1 Pinça + 1 Consola" },
+                { codigo: "9115000040", tipo: "PA2CA", designacao: "Conjunto Amarração DUPLO", info: "2 Pinças + 1 Consola " },
+                { codigo: "9115000045", tipo: "PA3CA", designacao: "Conjunto Amarração TRIPLO", info: "3 Pinças + 1 Consola" }
+            ]
+        },
+        "Pinça de Suspensão": {
+            aplicacao:"Utilizada na suspensão de cabos de torçada. Capacidades diferentes estão disponíveis para se adaptar ao diâmetro do cabo em uso. A pinça pode ser presa ao poste por meio de um Ferro com Olhal Rabo de Porco",
+            material: "Pinça de Suspensão com corpo metálico em aço electrozincado (AZ), galvanizado a quente (AG) ou aço inox (AI), núcleo em borracha de alta resistência mecânica, climatérica e dieléctrica",
+            colunas: ["Seção", "Código", "Tipo"],
+            especificacoes: [
+                { secao: "2×6 – 3×25", codigo: "9113000070", tipo: "PS AZ 325" },
+                { secao: "2×6 – 3×25", codigo: "9113000071", tipo: "PS AG 325" },
+                { secao: "2×6 – 3×25", codigo: "9113000075", tipo: "PS AI 325" },
+                { secao: "2×16 – 4×25", codigo: "9113000080", tipo: "PS AZ 425" },
+                { secao: "2×16 – 4×25", codigo: "9113000081", tipo: "PS AG 425" },
+                { secao: "2×16 – 4×25", codigo: "9113000085", tipo: "PS AI 425" },
+                { secao: "4×25 – 4×50", codigo: "9113000090", tipo: "PS AZ 50" },
+                { secao: "4×25 – 4×50", codigo: "9113000091", tipo: "PS AG 50" },
+                { secao: "4×25 – 4×50", codigo: "9113000095", tipo: "PS AI 50" },
+                { secao: "4×70 – 4×95", codigo: "9113000100", tipo: "	PS AZ 95" }
+            ]
+        },
+          "Ligadores de Derivação de Aperto Simultâneo": {
+            aplicacao: "Permite uma montagem sob tensão sem desnudamento do condutores. O aperto é controlado por um parafuso-fusível Derivação de cabos de torçada em cobre ou alumínio",
+            material: "Ligadores de Derivação e de Perfuração de isolamento com Aperto Simultâneo (6 kV) de resistência. São altamente resistentes. São fabricados em termoplástico reforçados com fibra de vidro, Dentes em Alumínio (AL) ou Cobre (CU)",
+            colunas: ["Seção", "Código", "Tipo"],
+            especificacoes: [
+                { secao: "10-95", codigo: "9123000430", tipo: "10-95/1,5-10 (IP)" },
+                { secao: "16-95", codigo: "9123000490", tipo: "16-95/4-35(50) (P25)" },
+                { secao: "16-150", codigo: "9123000495", tipo: "	16-150/6-50 (P50)" },
+                { secao: "16-95", codigo: "9123000500", tipo: "16-95/16-95 (P95)" },
+                { secao: "35-150", codigo: "9123000510", tipo: "35-150/35-150 (P150)" },
+                  { secao:"70-240", codigo: "9123000520", tipo: "70-240/70-240 (P240)" },
+                { secao: "10-95", codigo: "9123000431", tipo: "	10-95/1,5-10 (IP)" },
+                { secao: "16-95", codigo: "9123000492", tipo: "	16-95/4-35(50) (P25)" },
+                { secao: "16-150", codigo: "9123000496", tipo: "16-150/6-50 (P50)" },
+                { secao: "16-95", codigo: "9123000501", tipo: "	16-95/16-95 (P95)" }
+            ]
+        },
+              "Pinças de Amarração Plásticas para Ramais": {
+            aplicacao: "Pinças de amarração plásticas utilizada em baixadas e ramais de 2, 3 e 4 condutores idênticos em torçada.",
+            material: "Corpo e cunha em material plástico de elevada resistência mecânica e climatérica e gancho em aço inoxidável (AI)",
+            colunas: ["Seção", "Código", "Tipo"],
+            especificacoes: [
+                { secao: "2×6 – 2×16", codigo: "9113000020", tipo: "PAG AI 216" },
+                { secao: "4×6 – 4×16", codigo: "9113000040", tipo: "PAG AI 416" }
+             
+            ]
+        }
+    };
+
+    // ===== FUNÇÃO PARA GERAR TABELA DINÂMICA =====
+// ===== FUNÇÃO PARA GERAR TABELA DINÂMICA (VERSÃO SIMPLES - SEM ROWSPAN) =====
+// ===== FUNÇÃO PARA GERAR TABELA DINÂMICA (UNIVERSAL - SUPORTA ROWSPAN SÓ COM SEÇÃO) =====
+// ===== FUNÇÃO PARA GERAR TABELA DINÂMICA (DEFINITIVA - FUNCIONA PARA TODOS OS SEUS PRODUTOS) =====
+// ===== FUNÇÃO PARA GERAR TABELA DINÂMICA (COM MAPEAMENTO PARA SEÇÃO DERIVAÇÃO) =====
+function gerarTabelaDinamica(especificacoes, colunas) {
+    if (!especificacoes || especificacoes.length === 0) {
+        return '<tr><td colspan="' + colunas.length + '" style="text-align:center;">Especificações não disponíveisNonNull' + '</tr>';
+    }
+    
+    // Verifica se precisa de rowspan (primeira coluna é "Seção")
+    const precisaRowspan = colunas[0] === "Seção";
+    
+    if (precisaRowspan) {
+        // ===== ROWSPAN =====
+        const agrupado = {};
+        
+        for (let i = 0; i < especificacoes.length; i++) {
+            const item = especificacoes[i];
+            const chave = item.secao || "SEM SEÇÃO";
+            if (!agrupado[chave]) {
+                agrupado[chave] = [];
+            }
+            agrupado[chave].push(item);
+        }
+        
+        let html = '';
+        
+        for (const [secao, itens] of Object.entries(agrupado)) {
+            const rowspan = itens.length;
+            
+            for (let i = 0; i < itens.length; i++) {
+                const item = itens[i];
+                html += '<tr>';
+                
+                // Primeira coluna (Seção) com rowspan
+                if (i === 0) {
+                    html += `<td rowspan="${rowspan}" class="secao-cell" style="vertical-align:middle; background-color:#f0f4ff; font-weight:bold;">${secao}</td>`;
+                }
+                
+                // Demais colunas
+                for (let j = 1; j < colunas.length; j++) {
+                    const coluna = colunas[j];
+                    let valor = "-";
+                    
+                    // MAPEAMENTO COMPLETO
+                    if (coluna === "Código") {
+                        valor = item.codigo || "-";
+                    } else if (coluna === "Tipo") {
+                        valor = item.tipo || "-";
+                    } else if (coluna === "Designação") {
+                        valor = item.designacao || "-";
+                    } else if (coluna === "Info") {
+                        valor = item.info || "-";
+                    } else if (coluna === "Seção Derivação" || coluna === "Secção Derivação") {
+                        // Para campo "Seção Derivação" ou "Secção Derivação"
+                        valor = item.secaoDerivacao || item.seccaoDerivacao || "-";
+                    } else {
+                        // Para qualquer outra coluna
+                        const campo = coluna.toLowerCase().replace(/ /g, '').replace(/ç/g, 'c');
+                        valor = item[campo] || "-";
+                    }
+                    
+                    html += `<td class="cell-${j}">${valor}</td>`;
+                }
+                
+                html += '</tr>';
+            }
+        }
+        return html;
+    } else {
+        // ===== TABELA SIMPLES =====
+        let html = '';
+        
+        for (let i = 0; i < especificacoes.length; i++) {
+            const item = especificacoes[i];
+            html += '<tr>';
+            
+            for (let j = 0; j < colunas.length; j++) {
+                const coluna = colunas[j];
+                let valor = "-";
+                
+                // MAPEAMENTO COMPLETO
+                if (coluna === "Código") {
+                    valor = item.codigo || "-";
+                } else if (coluna === "Tipo") {
+                    valor = item.tipo || "-";
+                } else if (coluna === "Designação") {
+                    valor = item.designacao || "-";
+                } else if (coluna === "Info") {
+                    valor = item.info || "-";
+                } else if (coluna === "Seção Derivação" || coluna === "Secção Derivação") {
+                    valor = item.secaoDerivacao || item.seccaoDerivacao || "-";
+                } else {
+                    const campo = coluna.toLowerCase().replace(/ /g, '').replace(/ç/g, 'c');
+                    valor = item[campo] || "-";
+                }
+                
+                html += `<td class="cell-${j}">${valor}</td>`;
+            }
+            
+            html += '<tr>';
+        }
+        return html;
+    }
+}
+    // ===== FUNÇÃO PARA ATUALIZAR CABEÇALHO DA TABELA =====
+    function atualizarCabecalhoTabela(colunas) {
+        const thead = document.querySelector('#tabela-especificacoes thead');
+        if (!thead) return;
+        
+        let html = '<tr>';
+        for (let i = 0; i < colunas.length; i++) {
+            html += `<th>${colunas[i]}</th>`;
+        }
+        html += '</tr>';
+        thead.innerHTML = html;
+    }
+
+    // ===== FUNÇÃO PARA RENDERIZAR TABELA COM PAGINAÇÃO =====
+    let colunasAtuais = ["Seção", "Código", "Tipo"];
+    
+    function renderizarTabelaComPaginacao() {
+        const inicio = (tabelaPaginaAtual - 1) * itensPorPaginaTabela;
+        const fim = inicio + itensPorPaginaTabela;
+        const itensPagina = especificacoesCompletas.slice(inicio, fim);
+        
+        const tabelaBody = document.getElementById('tabela-especificacoes-body');
+        const totalPaginas = Math.ceil(especificacoesCompletas.length / itensPorPaginaTabela);
+        
+        if (tabelaBody) {
+            tabelaBody.innerHTML = gerarTabelaDinamica(itensPagina, colunasAtuais);
+        }
+        
+        const btnAnteriorTab = document.getElementById('tabAnterior');
+        const btnProximoTab = document.getElementById('tabProximo');
+        const paginaInfoTab = document.getElementById('tabPaginaInfo');
+        
+        if (btnAnteriorTab) btnAnteriorTab.disabled = tabelaPaginaAtual === 1;
+        if (btnProximoTab) btnProximoTab.disabled = tabelaPaginaAtual === totalPaginas || totalPaginas === 0;
+        if (paginaInfoTab) paginaInfoTab.textContent = `Página ${tabelaPaginaAtual} de ${totalPaginas || 1}`;
+    }
+
+    // ===== FUNÇÃO PARA ABRIR MODAL =====
+    function abrirModal(produto) {
+        console.log("Abrindo modal para:", produto.nome);
+        
+        const modal = document.getElementById('modal-produto');
+        const modalImg = document.getElementById('modal-img');
+        const modalNome = document.getElementById('modal-nome');
+        const modalAplicacao = document.getElementById('modal-aplicacao');
+        const modalMaterial = document.getElementById('modal-material');
+        
+        modalImg.src = produto.img;
+        modalNome.textContent = produto.nome;
+        
+        const dadosTecnicos = dadosTecnicosElet1[produto.nome];
+        
+        if (dadosTecnicos) {
+            modalAplicacao.textContent = dadosTecnicos.aplicacao;
+            modalMaterial.textContent = dadosTecnicos.material;
+            especificacoesCompletas = dadosTecnicos.especificacoes;
+            colunasAtuais = dadosTecnicos.colunas || ["Seção", "Código", "Tipo"];
+            
+            atualizarCabecalhoTabela(colunasAtuais);
+            tabelaPaginaAtual = 1;
+            renderizarTabelaComPaginacao();
+        } else {
+            modalAplicacao.textContent = 'Consultar representante comercial';
+            modalMaterial.textContent = 'Consultar representante comercial';
+            especificacoesCompletas = [];
+            colunasAtuais = ["Seção", "Código", "Tipo"];
+            atualizarCabecalhoTabela(colunasAtuais);
+            
+            const tabelaBody = document.getElementById('tabela-especificacoes-body');
+            if (tabelaBody) {
+                tabelaBody.innerHTML = '<td><td colspan="3" style="text-align:center;">Especificações em desenvolvimento</td></tr>';
+            }
+            const btnAnteriorTab = document.getElementById('tabAnterior');
+            const btnProximoTab = document.getElementById('tabProximo');
+            if (btnAnteriorTab) btnAnteriorTab.disabled = true;
+            if (btnProximoTab) btnProximoTab.disabled = true;
+            const paginaInfoTab = document.getElementById('tabPaginaInfo');
+            if (paginaInfoTab) paginaInfoTab.textContent = 'Página 1';
+        }
+        
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
     // ===== DADOS DAS SUBCATEGORIAS =====
     const subcategoriasData = {
         eletricos: [
@@ -302,7 +575,8 @@ document.addEventListener('DOMContentLoaded', function() {
             { id: 'elet6', nome: '6. BARRAS COLECTORAS' },
             { id: 'elet7', nome: '7. SUBESTAÇÕES' },
             { id: 'elet8', nome: '8. FERROVIAS' },
-            { id: 'elet9', nome: '9. TERMINAIS, UNIÕES E BORNES' },
+            { id: 'elet9', nome: '9. SOLDADURAS' },
+            { id: 'elet10', nome: '10. TERMINAIS, UNIÕES E BORNES' },
         ],
         construcao: [
             { id: 'cons1', nome: '1. CIMENTOS E ARGAMASSAS' },
@@ -344,17 +618,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ===== MAPEAMENTO DAS IMAGENS DO CLOUDINARY =====
     const imagensCloudinary = {
-        // MATERIAIS ELÉTRICOS
         'elet1': [
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/R10_l3whdp',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445047/R9_dmn7er.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776851672/ts_nzz2vh.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776851788/fe_urtahl.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445046/R6_qhxtmw.png',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445046/R7_gy2uuy.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776851470/Rw_tsq8qg.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445045/R5_dxtgba.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445045/R3_b2fxo0.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445045/R4_azzttv.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445044/R2_ajs7vd.png',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445042/R1_apc03g.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776866599/brt_bqmtis.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445048/R12_ynfvwg.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539208/roldana-em-aluminio-para-cabos-torcada-t-e-cabos-nus-n-600x600_zy1jdb.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539209/uniao-preisolada-jobasi_-500x500_1_mhzi7v.png',
@@ -376,7 +649,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776272347/images_26_wjc93n.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776271376/images_25_biwgrf.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776271160/images_24_qkvvmn.jpg',
- 
         ],
         'elet3': [
             'https://res.cloudinary.com/dhsg68f5x/image/upload/T6_ixlz8t',
@@ -394,7 +666,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542565/OIP_6_hdtizo.webp',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772542304/OIP_5_pmr8t3.webp',
         ],
-                'elet4': [
+        'elet4': [
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560110/para-raios-ponta-franklin-600x600_wz5s2u.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560108/jobasi-zeus-electron-zeus-sigma-600x600_y9cxbh.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560109/para-raios-franklin-600x600_duzdb9.jpg',
@@ -409,24 +681,24 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775647709/Ligador-Amovivel-500x500_jksskk.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775647708/abracadeira-chumbadouro-500x500_r1g8lo.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775647709/suporte-conico-ligador-500x500_fmca4q.jpg',
-             ],
-           'elet5':[
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560033/Cabo-de-Aluminio-8mm-500x500_jatyi4.png',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-aco-galvanizado-jobasi-600x600_elyuid.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-cobre-estanhado-jobasi-600x600_b4ithi.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-de-aco-inoxidavel-jobasi-600x600_sjfqti.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-cobre-macico-jobasi-600x600_i5t0dp.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560031/cabo-aco-cobreado-jobasi-600x600_eeyarc.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1772444998/I16_k5qtkp.webp',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560107/fita-aco-inox-jobasi-600x600_ubttgw.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560106/fita-aco-galvanizado-jobasi-1-600x600_ru7i2q.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560035/electrodo-2roscas-600x600_ymkoq1.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560105/electrodo-inox-galv_awufgh.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/electrodo-sem-rocas_snpx0v.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/electrodo-1rosca-600x600_edhalp.jpg',
-                        'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/tranca-plana-cobre-estanhada-600x600_e9hbuo.jpg',
-           ],
-           'elet6': [
+        ],
+        'elet5': [
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560033/Cabo-de-Aluminio-8mm-500x500_jatyi4.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-aco-galvanizado-jobasi-600x600_elyuid.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-cobre-estanhado-jobasi-600x600_b4ithi.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-de-aco-inoxidavel-jobasi-600x600_sjfqti.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560032/cabo-cobre-macico-jobasi-600x600_i5t0dp.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560031/cabo-aco-cobreado-jobasi-600x600_eeyarc.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1772444998/I16_k5qtkp.webp',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560107/fita-aco-inox-jobasi-600x600_ubttgw.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560106/fita-aco-galvanizado-jobasi-1-600x600_ru7i2q.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560035/electrodo-2roscas-600x600_ymkoq1.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775560105/electrodo-inox-galv_awufgh.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/electrodo-sem-rocas_snpx0v.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/electrodo-1rosca-600x600_edhalp.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1775908141/tranca-plana-cobre-estanhada-600x600_e9hbuo.jpg',
+        ],
+        'elet6': [
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/9113101482-BARRA-TERRA-CU-40X5X430-CAMOVIVEL-4-2-500x500_ngqxk1.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/9113100459-Barra-Coletora-500x500_wai0hv.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/9113100756-BARRA-COLECTORA-DE-TERRAS-40x5x220-S_-ISOLADOR-500x500_c2l9nt.png',
@@ -438,126 +710,113 @@ document.addEventListener('DOMContentLoaded', function() {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/9113100410-RENDER-S.PARAFUSOS-500x500_mehkrg.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/9113100458-500x500_tgrfgm.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/9113100414-barra-terra-40x5x200-2isoladores-5parafusos-ligacao-500x500_c1x0mj.png',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264104/barra-colectora-de-terras-30x5mm-para-electrodo-ft-600x600_pyrwir.jpg',  
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264104/barra-colectora-de-terras-30x5mm-para-electrodo-ft-600x600_pyrwir.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264105/barra-colectora-de-terras-inox-200X100X3-com-16-furos-500x500_cmifc4.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776264106/Barra-CU-9113100464-500x500_kgcafy.png',
-
-
-           ],
-            'elet7': [
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Ligadores-de-Terra-600x600_ocvff4.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/terminal-de-bt-para-transformador-de-potencia-600x600_soqbg2.jpg',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/grampos-de-conexao-para-estrutura-e-cabo-600x600_o9oksg.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Ligador-Dilatacao-90-Bimetalico-9113451451-1-500x500_xlvxlk.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Abrac%CC%A7adeiras-com-Alheta-600x600_v2en5g.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/ligador-paralelo-para-condutores-de-cobre-nu-600x600_nddlcz.jpg',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/Ligador-de-dilatacao-90-com-borne-9113451450-500x500_ojytm9.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/ligadores-para-cabo-barra-terra-com-e-sem-alheta-600x600_cwqfoc.jpg',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266032/4-600x600_hvlf0n.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266032/9113451180-500x500_bckibe.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/ligador-para-barra-de-terra-lbt-1-600x600_ym79ga.jpg',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/ligador-de-cobre-em-c-2--600x600_opn3wc.jpg',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/ligador-de-terra-para-seccionadores-d60d116-600x600_imk5kd.jpg',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/ligador-para-bornes-de-transformador-tipo-grampo-600x600_gubhti.jpg',
-
-            ],
-              'elet8': [
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/Perfil-L70-2-furos-o18-500x500_atsew1.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/p-cabo-de-terra-aereo-em-alonga-02.202.02-500x500_mlkt1b.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/Perfil-L60-2-Furos-D18-500x500_drkbjf.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267148/PAG-103-02.400.01-500x500_hfoz2m.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267148/PAG-93-02.300.01-500x500_jcoifw.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267148/PAG-84-02.209.01-500x500_epwaqc.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-64-02.110.01-500x500_cggft5.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-65-02.201.01-500x500_wfnvdw.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/06.900.01-PAG-258-2-500x500_m5wngf.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-57-02.108.01-500x500_wtc4i9.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/PAG-41-02.104.01-03-500x500_bmsze0.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/2-Rasgos-de-22-02.213.01-03-500x500_q9aaof.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/1-Furos-o18-02.202.01-500x500_kysjp7.png',
-                'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268118/1-Furo-02.200.01-04--500x500_maancu.png',
-              ],
-                'elet9': [
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cravar-cobre-bt-600x600_x3qlkp.jpg',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/tcjobasi-500x500_bncho5.png',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268961/terminaldinjobasi-500x500_wkwnua.png',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cobre-macico-de-cravar-mt-600x600_cyzkuc.jpg',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268958/jw-500x500_scid4y.png',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/Terminal-cravar-Cobre-90graus-500x500_mohirh.png',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268963/unioes-bimet-mt-600x600_hu2icp.jpg',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268958/terminal-bimetalico-tbi-600x600_f5krqe.jpg',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268959/terminal-concentrico-angulo-recto-600x600_g5xvid.jpg',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268963/uniao-de-cravar-de-cobre-bt-600x600_ac0pz5.jpg',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/Terminal-Cravar-Ponteira-500x500_ubmzyk.png',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268961/uniao-concentrica-simples-600x600_vqvfdc.jpg',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/Terminal-Liga-Unica-Jobasi-500x500_j4llga.png',
-                    'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cobre-macico-de-cravar-mt-600x600_cyzkuc.jpg',
-                ]
-
-
-        // ... (as restantes subcategorias mantêm-se como estavam)
+        ],
+        'elet7': [
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Ligadores-de-Terra-600x600_ocvff4.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/terminal-de-bt-para-transformador-de-potencia-600x600_soqbg2.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/grampos-de-conexao-para-estrutura-e-cabo-600x600_o9oksg.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Ligador-Dilatacao-90-Bimetalico-9113451451-1-500x500_xlvxlk.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/Abrac%CC%A7adeiras-com-Alheta-600x600_v2en5g.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/ligador-paralelo-para-condutores-de-cobre-nu-600x600_nddlcz.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/Ligador-de-dilatacao-90-com-borne-9113451450-500x500_ojytm9.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/ligadores-para-cabo-barra-terra-com-e-sem-alheta-600x600_cwqfoc.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266032/4-600x600_hvlf0n.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266032/9113451180-500x500_bckibe.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266034/ligador-para-barra-de-terra-lbt-1-600x600_ym79ga.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/ligador-de-cobre-em-c-2--600x600_opn3wc.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266033/ligador-de-terra-para-seccionadores-d60d116-600x600_imk5kd.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776266035/ligador-para-bornes-de-transformador-tipo-grampo-600x600_gubhti.jpg',
+        ],
+        'elet8': [
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/Perfil-L70-2-furos-o18-500x500_atsew1.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/p-cabo-de-terra-aereo-em-alonga-02.202.02-500x500_mlkt1b.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267149/Perfil-L60-2-Furos-D18-500x500_drkbjf.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267148/PAG-103-02.400.01-500x500_hfoz2m.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267148/PAG-93-02.300.01-500x500_jcoifw.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267148/PAG-84-02.209.01-500x500_epwaqc.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-64-02.110.01-500x500_cggft5.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-65-02.201.01-500x500_wfnvdw.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/06.900.01-PAG-258-2-500x500_m5wngf.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267147/PAG-57-02.108.01-500x500_wtc4i9.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/PAG-41-02.104.01-03-500x500_bmsze0.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/2-Rasgos-de-22-02.213.01-03-500x500_q9aaof.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776267146/1-Furos-o18-02.202.01-500x500_kysjp7.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268118/1-Furo-02.200.01-04--500x500_maancu.png',
+        ],
+        'elet9': [
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cravar-cobre-bt-600x600_x3qlkp.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/tcjobasi-500x500_bncho5.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268961/terminaldinjobasi-500x500_wkwnua.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cobre-macico-de-cravar-mt-600x600_cyzkuc.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268958/jw-500x500_scid4y.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/Terminal-cravar-Cobre-90graus-500x500_mohirh.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268963/unioes-bimet-mt-600x600_hu2icp.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268958/terminal-bimetalico-tbi-600x600_f5krqe.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268959/terminal-concentrico-angulo-recto-600x600_g5xvid.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268963/uniao-de-cravar-de-cobre-bt-600x600_ac0pz5.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/Terminal-Cravar-Ponteira-500x500_ubmzyk.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268961/uniao-concentrica-simples-600x600_vqvfdc.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/Terminal-Liga-Unica-Jobasi-500x500_j4llga.png',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cobre-macico-de-cravar-mt-600x600_cyzkuc.jpg',
+        ]
     };
 
-    // ===== DADOS REAIS DOS PRODUTOS (SUBSTITUIR AQUI) =====
-    const dadosProdutos = {
-        // MATERIAIS ELÉTRICOS - ACESSÓRIOS PARA REDES DE CABOS DE TORÇADA (elet1)
+    // ===== NOMES DOS PRODUTOS =====
+    const nomesProdutos = {
         'elet1': [
-            { nome: 'Berço de Guiamento com Espigão', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
-            { nome: 'Berço de Guiamento com Gancho', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
-            { nome: 'Pinça e Consola de Amarração para Redes com Neutro Tensor', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
-            { nome: 'Ligador de Derivação (IP)', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
-            { nome: 'Pinça de Suspensão', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
-            { nome: 'Pinças de Amarração Plásticas para Ramais', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
-            { nome: 'Pinça de Amarração Metálica para Redes', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
-            { nome: 'Pinça e Consola de Suspensão para Redes com Neutro Tensor', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
-            { nome: 'Ligador de Derivação (P95)', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
-            { nome: 'Terminal Pré-Isolado', desc: 'Conector tipo cunha para cabos de alumínio', material: 'pedra', dimensoes: '45 x 25 x 15 mm', peso: '0.15 kg', cor: 'Prata', norma: 'NBR 12345' },
-            { nome: 'Roldana em Alumínio para Cabos de Torçada e Cabos Nus', desc: 'Chave para montagem de conectores torçados', material: 'Aço carbono', dimensoes: '200 x 50 x 20 mm', peso: '1.2 kg', cor: 'Vermelho', norma: 'ISO 6789' },
-            { nome: 'União Pré-Isolada', desc: 'Isolador para cabos torçados', material: 'Polietileno', dimensoes: '30 x 30 mm', peso: '0.05 kg', cor: 'Preto', norma: 'NBR 5432' },
-           
-            // ... até 14 produtos (substituir pelos reais)
-            // ... até 14 produtos (substituir pelos reais)
+            "Berço de Guiamento",
+            "Ligadores de Derivação de Aperto Independente",
+            "Pinça e Consola de Amarração para Redes com Neutro Tensor",
+            "Ligadores de Derivação de Aperto Simultâneo",
+            "Pinça de Suspensão",
+            "Pinças de Amarração Plásticas para Ramais",
+            "Pinça de Amarração Metálica para Redes",
+            "Pinça e Consola de Suspensão para Redes com Neutro Tensor",
+            "Ligador de Derivação (P95)",
+            "Terminal Pré-Isolado",
+            "Roldana em Alumínio para Cabos de Torçada e Cabos Nus",
+            "União Pré-Isolada",
+            "Braço de Sustentação 90°",
+            "Pinça de Suspensão Mural"
         ],
-        // ACESSÓRIOS PARA ILUMINAÇÃO PÚBLICA (elet2)
-        'elet2': [
-            { nome: 'Luminária LED 60W', desc: 'Luminária para via pública, 60W, 5000K', material: 'Alumínio e policarbonato', dimensoes: '400 x 200 x 100 mm', peso: '3.5 kg', cor: 'Branco', norma: 'IEC 60598' },
-            { nome: 'Braço para Luminária', desc: 'Braço em aço galvanizado 1,5m', material: 'Aço galvanizado', dimensoes: '1500 mm', peso: '2.8 kg', cor: 'Galvanizado', norma: 'NBR 5432' },
-            // ... até 14
-        ],
-        // ... continuar para todas as subcategorias
+        'elet3': [
+            "Pinça de Suspensão",
+            "Ligador de Derivação",
+            "Conector de Tensão",
+            "Gancho de Ancoragem",
+            "Esticador de Linha",
+            "Manilha de Suspensão",
+            "Cantoneira de Fixação",
+            "Braço de Sustentação",
+            "Isolador de Porcelana",
+            "Grampo de Ancoragem",
+            "Conector Bimetálico",
+            "Luva de Emenda",
+            "Para-raios",
+            "Espaçador de Cabos"
+        ]
     };
 
     // ===== BASE DE DADOS DE PRODUTOS =====
     const catalogoProdutos = {};
 
-    // Gerar produtos usando as URLs e os dados reais
+    // Gerar produtos usando as URLs
     for (const cat in subcategoriasData) {
         subcategoriasData[cat].forEach(sub => {
             const produtos = [];
             const urls = imagensCloudinary[sub.id] || [];
-            const dados = dadosProdutos[sub.id] || [];
-
+            const nomes = nomesProdutos[sub.id] || [];
+            
             for (let i = 0; i < 14; i++) {
                 const url = urls[i] || (CLOUDINARY + 'placeholder.jpg');
-                // Se existirem dados reais para este índice, usa-os; senão, usa fallback
-                const info = dados[i] || {
-                    nome: `Produto ${sub.id} - ${i+1}`,
-                    desc: `Descrição do produto ${i+1}`,
-                    material: 'Consultar',
-                    dimensoes: 'Consultar',
-                    peso: 'Consultar',
-                    cor: 'Consultar',
-                    norma: 'Consultar'
-                };
+                const nome = nomes[i] || `Produto ${sub.id} - ${i+1}`;
+                
                 produtos.push({
                     img: url,
-                    nome: info.nome,
-                    desc: info.desc,
-                    material: info.material,
-                    dimensoes: info.dimensoes,
-                    peso: info.peso,
-                    cor: info.cor,
-                    norma: info.norma
+                    nome: nome
                 });
             }
             catalogoProdutos[sub.id] = produtos;
@@ -569,14 +828,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let termoPesquisa = '';
     let paginaAtual = 1;
     const itensPorPagina = 6;
+    
+    // ===== VARIÁVEIS PARA PAGINAÇÃO DA TABELA =====
+    let tabelaPaginaAtual = 1;
+    let itensPorPaginaTabela = 5;
+    let especificacoesCompletas = [];
 
-    // ===== FUNÇÕES =====
+    // ===== FUNÇÕES DE CARREGAMENTO =====
     function carregarProdutos(subcategoriaId) {
         const produtos = catalogoProdutos[subcategoriaId] || [];
         
         const produtosFiltrados = produtos.filter(prod =>
-            prod.nome.toLowerCase().includes(termoPesquisa.toLowerCase()) ||
-            prod.desc.toLowerCase().includes(termoPesquisa.toLowerCase())
+            prod.nome.toLowerCase().includes(termoPesquisa.toLowerCase())
         );
 
         const totalPaginas = Math.ceil(produtosFiltrados.length / itensPorPagina);
@@ -599,7 +862,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <img src="${prod.img}" alt="${prod.nome}" onerror="this.src='${CLOUDINARY}placeholder.jpg'">
                     <div class="card-body">
                         <h4>${prod.nome}</h4>
-                        <p>${prod.desc}</p>
                     </div>
                 </div>
             `;
@@ -655,18 +917,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // VOLTAR PARA CATEGORIAS PRINCIPAIS
-    voltarBtn.addEventListener('click', function() {
-        categoriasPrincipaisDiv.style.display = 'block';
-        subcategoriasDiv.style.display = 'none';
-        subcategoriaAtual = null;
-        produtosGrid.innerHTML = '';
-        document.querySelectorAll('.categoria-btn').forEach(b => b.classList.remove('ativo'));
-        if (btnAnterior && btnProximo && paginaInfo) {
-            btnAnterior.disabled = true;
-            btnProximo.disabled = true;
-            paginaInfo.textContent = 'Página 1';
-        }
-    });
+    if (voltarBtn) {
+        voltarBtn.addEventListener('click', function() {
+            categoriasPrincipaisDiv.style.display = 'block';
+            subcategoriasDiv.style.display = 'none';
+            subcategoriaAtual = null;
+            produtosGrid.innerHTML = '';
+            document.querySelectorAll('.categoria-btn').forEach(b => b.classList.remove('ativo'));
+            if (btnAnterior && btnProximo && paginaInfo) {
+                btnAnterior.disabled = true;
+                btnProximo.disabled = true;
+                paginaInfo.textContent = 'Página 1';
+            }
+        });
+    }
 
     // ===== PESQUISA =====
     if (pesquisaInput) {
@@ -689,7 +953,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== PAGINAÇÃO =====
+    // ===== PAGINAÇÃO DO CATÁLOGO =====
     if (btnAnterior) {
         btnAnterior.addEventListener('click', function() {
             if (subcategoriaAtual && paginaAtual > 1) {
@@ -702,7 +966,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (btnProximo) {
         btnProximo.addEventListener('click', function() {
             if (subcategoriaAtual) {
-                const total = Math.ceil(catalogoProdutos[subcategoriaAtual].length / itensPorPagina);
+                const produtos = catalogoProdutos[subcategoriaAtual] || [];
+                const produtosFiltrados = produtos.filter(prod =>
+                    prod.nome.toLowerCase().includes(termoPesquisa.toLowerCase())
+                );
+                const total = Math.ceil(produtosFiltrados.length / itensPorPagina);
                 if (paginaAtual < total) {
                     paginaAtual++;
                     carregarProdutos(subcategoriaAtual);
@@ -711,47 +979,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ===== MODAL =====
+    // ===== PAGINAÇÃO DA TABELA DENTRO DO MODAL =====
+    const btnAnteriorTab = document.getElementById('tabAnterior');
+    const btnProximoTab = document.getElementById('tabProximo');
+    
+    if (btnAnteriorTab) {
+        btnAnteriorTab.addEventListener('click', function() {
+            if (tabelaPaginaAtual > 1) {
+                tabelaPaginaAtual--;
+                renderizarTabelaComPaginacao();
+            }
+        });
+    }
+    
+    if (btnProximoTab) {
+        btnProximoTab.addEventListener('click', function() {
+            const totalPaginas = Math.ceil(especificacoesCompletas.length / itensPorPaginaTabela);
+            if (tabelaPaginaAtual < totalPaginas) {
+                tabelaPaginaAtual++;
+                renderizarTabelaComPaginacao();
+            }
+        });
+    }
+
+    // ===== MODAL: FECHAR =====
     const modal = document.getElementById('modal-produto');
-    const modalImg = document.getElementById('modal-img');
-    const modalNome = document.getElementById('modal-nome');
-    const modalDesc = document.getElementById('modal-desc');
-    const modalMaterial = document.getElementById('ft-material');
-    const modalDimensoes = document.getElementById('ft-dimensoes');
-    const modalPeso = document.getElementById('ft-peso');
-    const modalCor = document.getElementById('ft-cor');
-    const modalNorma = document.getElementById('ft-norma');
-    const modalOrcamento = document.getElementById('modal-orcamento');
     const modalClose = document.querySelector('.modal-close');
+    const modalOrcamento = document.getElementById('modal-orcamento');
 
-    if (modal) {
-        function abrirModal(produto) {
-            modalImg.src = produto.img;
-            modalNome.textContent = produto.nome;
-            modalDesc.textContent = produto.desc;
-            modalMaterial.textContent = produto.material || 'Consultar';
-            modalDimensoes.textContent = produto.dimensoes || 'Consultar';
-            modalPeso.textContent = produto.peso || 'Consultar';
-            modalCor.textContent = produto.cor || 'Consultar';
-            modalNorma.textContent = produto.norma || 'Consultar';
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
+    if (modalClose) {
+        modalClose.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
 
-        function fecharModal() {
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
+    });
 
-        modalClose.addEventListener('click', fecharModal);
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) fecharModal();
-        });
-
+    if (modalOrcamento) {
         modalOrcamento.addEventListener('click', () => {
             window.location.href = 'contato.html';
         });
-
-        window.abrirModal = abrirModal;
     }
+
+    // Expor função global
+    window.abrirModal = abrirModal;
 });

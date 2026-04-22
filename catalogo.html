@@ -207,32 +207,62 @@
     </footer>
 
 <!-- Modal de Ficha Técnica -->
+<!-- Modal de Ficha Técnica - Estrutura aprovada para elet1 -->
 <div id="modal-produto" class="modal">
     <div class="modal-content">
         <span class="modal-close">&times;</span>
-        <div class="modal-body">
+        
+        <!-- Topo: Imagem + Informações lado a lado -->
+        <div class="modal-topo">
             <div class="modal-image">
                 <img id="modal-img" src="" alt="Produto">
             </div>
-            <div class="modal-detalhes">
+            <div class="modal-info">
                 <h2 id="modal-nome"></h2>
-                <p id="modal-desc"></p>
-                <div id="modal-ficha" class="ficha-tecnica">
-                    <h3>Ficha Técnica</h3>
-                    <table>
-                        <tr><th>Material</th><td id="ft-material">-</td></tr>
-                        <tr><th>Dimensões</th><td id="ft-dimensoes">-</td></tr>
-                        <tr><th>Peso</th><td id="ft-peso">-</td></tr>
-                        <tr><th>Cor</th><td id="ft-cor">-</td></tr>
-                        <tr><th>Norma</th><td id="ft-norma">-</td></tr>
-                    </table>
+                <div class="info-campo">
+                    <strong>Aplicação:</strong>
+                    <span id="modal-aplicacao">-</span>
                 </div>
-                <button class="btn-primary" id="modal-orcamento">Solicitar Orçamento</button>
+                <div class="info-campo">
+                    <strong>Material:</strong>
+                    <span id="modal-material">-</span>
+                </div>
             </div>
         </div>
+        
+        <!-- Tabela com rowspan (Seção | Código | Tipo) -->
+        <div class="tabela-container">
+            <h3>Especificações Técnicas</h3>
+            
+            <!-- Paginação com setas -->
+            <div class="tabela-paginacao">
+                <button class="pag-btn" id="tabAnterior" disabled>◀</button>
+                <span id="tabPaginaInfo">Página 1</span>
+                <button class="pag-btn" id="tabProximo">▶</button>
+            </div>
+            
+            <div class="tabela-wrapper">
+                <table class="tabela-especificacoes"  id="tabela-especificacoes" >
+                    <thead>
+                        <tr>
+                            <th>Seção</th>
+                            <th>Código</th>
+                            <th>Tipo / Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-especificacoes-body">
+                        <tr>
+                            <td colspan="3" style="text-align:center;">Carregando...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Botão de Orçamento -->
+        <button class="btn-primary" id="modal-orcamento">Solicitar Orçamento</button>
     </div>
 </div>
-
 
 
     <script src="script.js"></script>
