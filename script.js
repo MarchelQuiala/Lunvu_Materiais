@@ -575,8 +575,8 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             { id: 'elet6', nome: '6. BARRAS COLECTORAS' },
             { id: 'elet7', nome: '7. SUBESTAÇÕES' },
             { id: 'elet8', nome: '8. FERROVIAS' },
-            { id: 'elet9', nome: '9. SOLDADURAS' },
-            { id: 'elet10', nome: '10. TERMINAIS, UNIÕES E BORNES' },
+            { id: 'elet9', nome: '9. TERMINAIS, UNIÕES E BORNES' },
+        
         ],
         construcao: [
             { id: 'cons1', nome: '1. CIMENTOS E ARGAMASSAS' },
