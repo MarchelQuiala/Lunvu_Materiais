@@ -371,7 +371,84 @@ document.addEventListener('DOMContentLoaded', function() {
                 { secao: "4×6 – 4×16", codigo: "9113000040", tipo: "PAG AI 416" }
              
             ]
-        }
+        },
+               "Pinça de Amarração Metálica para Redes": {
+            aplicacao: "Utilização adequada para amarração dos cabos de torçada utilizados em redes de distribuição.",
+            material: "Cunhas em material plástico de alta resistência mecânica e climatérica. Hastes em aço inox, aço galvanizado ou aço zincado.",
+            colunas: ["Seção", "Código", "Tipo"],
+            especificacoes: [
+                { secao: "4×25 – 4×50", codigo: "9113000050", tipo: "PAH AZ 450" },
+                { secao: "4×25 – 4×50", codigo: "9113000051", tipo: "PAH AG 450" },
+                { secao: "4×25 – 4×50", codigo: "9113000055", tipo: "PAH AI 450" },
+                { secao: "4×70 – 4×95", codigo: "9113000060", tipo: "PAH AZ 495" },
+                { secao: "4×70 – 4×95", codigo: "9113000061", tipo: "PAH AG 495" },
+                { secao: "4×70 – 4×95", codigo: "9113000065", tipo: "PAH AI 495" }
+             
+            ]
+        },
+                "Pinça e Consola de Suspensão para Redes com Neutro Tensor": {
+            aplicacao: "Suspensão em linha ou em ângulo de cabos de torçada com neutro tensor. Fixação da pinça de suspensão ao poste através de 1 parafuso ou fita de aço inox (consulte o capítulo 5).",
+            material: "Pinça e Consola de Suspensão para Redes com Neutro Tensor, pinça de Suspensão PS1500 provida de ligação móvel em matéria. plástica isolante de alta resistência mecânica, climática e dieléctrica, Consola de Suspensão CS1500 composta em alumínio fundido.",
+            colunas: ["Código", "Tipo","Info", "Designação"],
+            especificacoes: [
+                { codigo: "9124300020", tipo: "PS 1500 / 54" , info: "1 Pinça" , designacao: "Pinça Suspenção 54.6 mm²" },
+                { codigo: "9115000017", tipo: "	CS 1500" , info: "1 Consola" , designacao: "Consola Suspenção" },
+                { codigo: "9115000050", tipo: "	PS1CS" , info: "1 Pinça + 1 Consola" , designacao: "Conjunto Suspenção" },
+              
+             
+            ]
+        },
+              "Abraçadeira de liga": {
+            aplicacao: "Fixação e sustentação de cabos isolados em redes aéreas de distribuição elétrica (postes). Disponível nas versões simples (1 cabo) e dupla (2 cabos)",
+            material: " Zamak (liga de zinco de alta resistência)",
+            colunas: ["Código", "Tipo","Info"],
+            especificacoes: [
+                { codigo: "9123050275", tipo: "ALS 5/14" , info: "Simples" },
+                { codigo: "9123052300", tipo: "	ALS 9/18" , info: "Simples"  },
+                { codigo: "9123052280", tipo: "	ALS 18/29" , info: "Simples"  },
+                { codigo: "9123052290", tipo: "ALS 29/40" , info: "Simples" },
+                { codigo: "9123052270", tipo: "	ALD 9/18" , info: "Duplo"  },
+                { codigo: "9123052250", tipo: "	ALD 18/29" , info: "Duplo"  },
+                { codigo: "9123052260", tipo: "	ALD 29/40" , info: "Duplo"  },
+             
+            ]
+        },
+
+              "Terminal Pré-Isolado": {
+            aplicacao: "Utilizado para efetuar a ligação de dois condutores isolados, bornes ou barras de cobre em redes BT. Instalação por compressão hexagonal por meio de matrizes E140, E173, E215 ",
+            material: " Terminal Pré-Isolado fabricado com cobre e material plástico de alta resistência mecânica, climática e dieléctrica.",
+            colunas: ["Seção", "Código", "Tipo","Info", "Cor"],
+            especificacoes: [
+                { secao: "16 mm²", codigo: "9123000740", tipo: "CPTAU 16 (E140)" , info: "Matriz E140", cor:"Azul" },
+                { secao: "25 mm²", codigo: "9123000750", tipo: "	CPTAU 25 (E140)" , info: "Matriz E140", cor:"Laranja"  },
+                { secao: "35 mm²", codigo: "9123000760", tipo: "	CPTAU 35 (E173)" , info: "Matriz E173", cor:"Vermelho"  },
+                { secao: "50 mm²", codigo: "9123000770", tipo: "CPTAU 50 (E173)" , info: "Matriz E173", cor:"Amarelo" },
+                { secao: "54 mm²", codigo: "9123000775", tipo: "	CPTAU 54 (E173" , info: "Matriz E173", cor:"Preto"  },
+                { secao: "70 mm²", codigo: "9123000780", tipo: "	CPTAU 70 (E173)" , info: "Matriz E173", cor:"Branco"  },
+                { secao: "95 mm²", codigo: "9123000782", tipo: "	CPTAU 95 (E173)" , info: "Matriz E173", cor:"Cinzento"  },
+                { secao: "120 mm²", codigo: "9123000784", tipo: "	CPTAU 120 (E215)" , info: "Matriz E215", cor:"Rosa"  },
+                { secao: "150 mm²", codigo: "9123000785", tipo: "	CPTAU 150 (E215)" , info: "Matriz E215", cor:"Violeta"  },
+            
+             
+            ]
+        },
+
+           "Roldana em Alumínio para Cabos de Torçada e Cabos Nus": {
+            aplicacao: "São ideais para facilitar a colocação dos cabos de torçada no local de instalação, sem danificar a camada do isolamento exterior. Linguetas de segurança para fixar o gancho e o cabo. ",
+            material: "Roldana em alumínio para cabos de torçada e cabos nus. O gancho orientável é em alumínio com alta resistência mecânica e a pedido, gola com revestimento. (E)",
+            colunas: ["Código", "Tipo","Info"],
+            especificacoes: [
+                {codigo: "9124050090", tipo: "RCT D250" , info: "Cabo torçada" },
+                {codigo: "9124050095", tipo: "	RCT D250 E" ,info: "Cabo torçada" },
+                {codigo: "9124050100", tipo: "	RCT D150" ,info: "Cabo torçada" },
+                {codigo: "9124050105", tipo: "RCT D150 E" , info: "Cabo torçada"},
+                {codigo: "9124050115", tipo: "	RCN D400" , info: "Cabo NU"  },
+                {codigo: "9124050110", tipo: "	RCN D250" , info: "Cabo NU"},
+              
+            
+             
+            ]
+        },
     };
 
     // ===== FUNÇÃO PARA GERAR TABELA DINÂMICA =====
@@ -775,7 +852,7 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             "Pinças de Amarração Plásticas para Ramais",
             "Pinça de Amarração Metálica para Redes",
             "Pinça e Consola de Suspensão para Redes com Neutro Tensor",
-            "Ligador de Derivação (P95)",
+            "Abraçadeira de liga",
             "Terminal Pré-Isolado",
             "Roldana em Alumínio para Cabos de Torçada e Cabos Nus",
             "União Pré-Isolada",
