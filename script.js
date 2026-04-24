@@ -449,6 +449,45 @@ document.addEventListener('DOMContentLoaded', function() {
              
             ]
         },
+
+          "União Pré-Isolada": {
+            aplicacao: "Ligação de dois condutores isolados de redes BT, permite a ligação estanque de cabos Alumínio-Alumínio. Alumínio-Cobre e Cobre-Cobre e instalação por compressão hexagonal  ",
+            material: "Corpo em alumínio, revestimento em material plástico de alta resistência mecânica climática e dielétrica. Interior revestido com massa dielétrica para otimizar o contacto, de acordo com as normas NFC 33-021 e EN 50-483",
+            colunas: ["Seção", "Código", "Tipo","Info", "Cor"],
+            especificacoes: [
+                {secao: "16 mm²", codigo: "9123000790", tipo: "MJPB 16" , info: "	Matriz E140" , cor:"Azul" },
+                {secao: "16 mm²", codigo: "9123000791", tipo: "MJPT 16" ,info: "Matriz E173" , cor:"Azul" },
+                {secao: "25 mm²", codigo: "9123000800", tipo: "MJPB 25" ,info: "Matriz E140" , cor:"Laranja" },
+                {secao: "25 mm²", codigo: "9123000801", tipo: " MJPT 25" , info: "Matriz E173", cor:"Laranja" },
+                {secao: "25/16 mm²", codigo: "9123000803", tipo: "MJPT 25/16" , info: "Matriz E173"  , cor:"Laranja-Azul" },
+                {secao: "35 mm²", codigo: "9123000810", tipo: "MJPB 35" , info: "	Matriz E140", cor:"Vermelho" },
+               { secao: "35 mm²", codigo: "9123000811", tipo: "MJPT 35" , info: "	Matriz E140", cor:"Vermelho" },
+                {secao: "50 mm²", codigo: "9123000820", tipo: "MJPT 50" ,info: "Matriz E173", cor:"Amarelo" },
+                {secao: "50/25 mm²", codigo: "9123000805", tipo: "MJPT 50/25" ,info: "Matriz E173", cor:"Amarelo-Laranja" },
+                {secao: "54 mm²", codigo: "9123000822", tipo: "MJPT 54 (NEUTRO)" , info: "Matriz E173", cor:"Preto"},
+            ]
+        },
+         "Pinça de Suspensão Mural": {
+            aplicacao: "Utilizado para fixação de cabos de torçada em fachadas: Pinça Suspensão Mural (PSM) fixa os cabos de torçada às fachadas mantendo o afastamento da parede. ",
+            material: "Pinça fabricada com material plástico de alta resistência mecânica, climática e dieléctrica",
+            colunas: [ "Código", "Tipo","Material", "Designação"],
+            especificacoes: [
+                { codigo: "9123000900", tipo: "4×25 a 4×95 cabos" , material: "	Prego Aço" , designacao: "PSM 70.1" },
+                { codigo: "9123000910", tipo: "4×25 a 4×95 cabos" ,material: "	Prego Aço" , designacao: "PSM 70.6" },
+                {codigo: "9123000920", tipo: "2×6 a 4×25 cabos" ,material: "Prego Plástico" , designacao: "PSM 4-6/16" },
+                
+            ]
+        },
+         "Cachimbo em aluminio para baixadas": {
+            aplicacao: "Entrada do ramal aéreo no interior dos edifícios, evitando infiltrações e melhorando o aspecto estético. ",
+            material: "Liga de alumínio fundido.",
+            colunas: [ "Seção", "Código", "Tipo"],
+            especificacoes: [
+                {secao: "2×6 – 4×6", codigo: "9123001020", tipo: "	CB 2646"  },
+              
+                
+            ]
+        },
     };
 
     // ===== FUNÇÃO PARA GERAR TABELA DINÂMICA =====
@@ -708,7 +747,7 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445048/R12_ynfvwg.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539208/roldana-em-aluminio-para-cabos-torcada-t-e-cabos-nus-n-600x600_zy1jdb.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539209/uniao-preisolada-jobasi_-500x500_1_mhzi7v.png',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539208/braco-pe-90-600x600_pa4bwk.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1777044161/ght_zifabg.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539208/pinca-de-suspencao-mural-l7wv-600x600_pjkghz.jpg',
         ],
         'elet2': [
@@ -856,7 +895,7 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             "Terminal Pré-Isolado",
             "Roldana em Alumínio para Cabos de Torçada e Cabos Nus",
             "União Pré-Isolada",
-            "Braço de Sustentação 90°",
+            "Cachimbo em aluminio para baixadas",
             "Pinça de Suspensão Mural"
         ],
         'elet3': [
