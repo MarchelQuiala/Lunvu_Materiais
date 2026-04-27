@@ -1280,88 +1280,215 @@ footer {
     }
 }
 
-/* ====== NOSSA EQUIPE ====== */
+/* ====== NOSSA EQUIPE - VERSÃO PROFISSIONAL ====== */
 .equipe-section {
-    padding: 80px 5%;
-    background: #f9f9f9;
+    padding: 100px 5%;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+    position: relative;
+}
+
+.equipe-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4361ee, transparent);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+}
+
+.section-header h2 .highlight {
+    color: #4361ee;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2 .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #4361ee, #7b2cbf);
+    border-radius: 3px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .equipe-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
+/* CARD MODERNO */
 .membro {
     text-align: center;
-    
+    background: white;
+    border-radius: 20px;
+    padding: 30px 20px 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(67, 97, 238, 0.08);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Cards quadrados - sem borda circular */
+/* Efeito de brilho no hover */
+.membro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(67, 97, 238, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.membro:hover::before {
+    left: 100%;
+}
+
+/* Efeito hover completo */
+.membro:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 45px rgba(67, 97, 238, 0.15);
+    border-color: rgba(67, 97, 238, 0.2);
+}
+
+/* Imagem do membro */
 .membro img {
     width: 100%;
-    max-width: 180px;
+    max-width: 170px;
     aspect-ratio: 1/1;
-    border-radius: 0;          /* quadrado perfeito (sem arredondamento) */
+    border-radius: 16px;
     object-fit: cover;
-    object-position: center 35%;   /* ajusta o foco para não cortar a cabeça */
+    object-position: center 35%;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Se quiser cantos levemente arredondados (opcional) */
-.membro img {
-    border-radius: 8px;        /* pequeno arredondamento, ainda sim quadrado */
+.membro:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 12px 28px rgba(67, 97, 238, 0.2);
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+/* Nome do membro */
+.membro h4 {
+    font-size: 1.2rem;
+    color: #1a1a2e;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Linha decorativa embaixo do nome */
+.membro h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4361ee, #7b2cbf);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.membro:hover h4::after {
+    width: 50px;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+
+/* Tablet médio (1024px - 1200px) */
+@media (max-width: 1200px) {
+    .equipe-grid {
+        gap: 25px;
+    }
+    .membro {
+        padding: 25px 15px;
+    }
     .membro img {
         max-width: 150px;
     }
 }
 
-
-
-.membro img:hover {
-    transform: scale(1.05);
-}
-
-.membro h4 {
-    font-size: 1.3rem;
-    color: #0b0b0b;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.membro p {
-    color: #666;
-    font-size: 1rem;
-}
-
-@media (max-width: 1100px) {
-    .equipe-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
+/* Tablet (768px - 1024px) */
+@media (max-width: 992px) {
     .equipe-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 800px;
+    }
+    .section-header h2 {
+        font-size: 2.3rem;
     }
 }
 
-@media (max-width: 600px) {
+/* Mobile grande (576px - 768px) */
+@media (max-width: 768px) {
+    .equipe-section {
+        padding: 60px 5%;
+    }
     .equipe-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 25px;
+        max-width: 500px;
+    }
+    .membro {
+        padding: 20px 15px;
+    }
+    .membro img {
+        max-width: 130px;
+    }
+    .membro h4 {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    .section-header p {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile pequeno (até 576px) */
+@media (max-width: 576px) {
     .equipe-grid {
         grid-template-columns: 1fr;
         gap: 25px;
+        max-width: 280px;
+    }
+    .membro {
+        padding: 25px 20px;
     }
     .membro img {
         max-width: 150px;
@@ -2281,3 +2408,9 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* rfdhhhhhhhhhhhhhhhhhhh */
+
+
+
+

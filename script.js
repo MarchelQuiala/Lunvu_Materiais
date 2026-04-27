@@ -71,52 +71,63 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // ANIMAÇÃO DE ESTATÍSTICAS
     // ============================================
-    function animateCounter(element, target, suffix = '') {
-        let current = 0;
-        const increment = target / 50;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
-            }
-            element.textContent = Math.floor(current) + suffix;
-        }, 30);
-    }
+// ============================================
+// CONTAGEM AUTOMÁTICA DAS ESTATÍSTICAS
+// ============================================
+function animateCounter(element, target, suffix = '') {
+    let current = 0;
+    const increment = target / 50;
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current) + suffix;
+    }, 30);
+}
+
+// CORREÇÃO: Usando a seção correta .stats-grid
+const statsSection = document.querySelector('.stats-grid');
+const stats = document.querySelectorAll('.stat-item h3'); // CORRIGIDO: .stat-item h3
+
+if (statsSection && stats.length > 0) {
+    let alreadyCounted = false; // Evita contar múltiplas vezes
     
-    const aboutSection = document.querySelector('.about');
-    const stats = document.querySelectorAll('.stat h3');
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !alreadyCounted) {
+            alreadyCounted = true;
+            
+            stats.forEach(stat => {
+                const text = stat.textContent;
+                let target, suffix = '';
+                
+                if (text.includes('+')) {
+                    target = parseInt(text.replace('+', ''));
+                    suffix = '+';
+                } else if (text.includes('%')) {
+                    target = parseInt(text.replace('%', ''));
+                    suffix = '%';
+                } else if (text.includes('anos') || text.includes('Anos')) {
+                    target = parseInt(text);
+                    suffix = '+ Anos';
+                } else {
+                    target = parseInt(text);
+                }
+                
+                if (!isNaN(target)) {
+                    // Reseta o texto para 0 antes de começar a contar
+                    stat.textContent = '0' + suffix;
+                    animateCounter(stat, target, suffix);
+                }
+            });
+            
+            observer.unobserve(statsSection);
+        }
+    }, { threshold: 0.3 }); // Começa quando 30% da seção estiver visível
     
-    if (aboutSection && stats.length > 0) {
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                stats.forEach(stat => {
-                    const text = stat.textContent;
-                    let target, suffix = '';
-                    
-                    if (text.includes('+')) {
-                        target = parseInt(text.replace('+', ''));
-                        suffix = '+';
-                    } else if (text.includes('%')) {
-                        target = parseInt(text.replace('%', ''));
-                        suffix = '%';
-                    } else if (text.includes('anos')) {
-                        target = parseInt(text.replace(' anos', ''));
-                        suffix = ' anos';
-                    } else {
-                        target = parseInt(text);
-                    }
-                    
-                    if (!isNaN(target)) {
-                        animateCounter(stat, target, suffix);
-                    }
-                });
-                observer.unobserve(aboutSection);
-            }
-        }, { threshold: 0.5 });
-        
-        observer.observe(aboutSection);
-    }
+    observer.observe(statsSection);
+}
     
     // ============================================
     // NAVBAR COM EFEITO AO SCROLL
@@ -1145,4 +1156,15 @@ function gerarTabelaDinamica(especificacoes, colunas) {
 
     // Expor função global
     window.abrirModal = abrirModal;
+
+
+
+    /*    // ===== TESTE DE CARREGAMENTO DE PRODUTOS =====*/
+
+
+
+    
+
+
+    
 });
