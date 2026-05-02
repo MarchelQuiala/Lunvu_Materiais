@@ -240,39 +240,54 @@ if (statsSection && stats.length > 0) {
     // ============================================
     // FORMULÁRIO DE CONTACTO COM MENSAGEM INLINE (PÁGINA CONTATO)
     // ============================================
-    const contactForm = document.getElementById('contactForm');
-    const formMensagem = document.getElementById('form-mensagem');
+// ===== FORMULÁRIO DE CONTACTO MODERNO =====
+const contactFormModern = document.getElementById('contactForm');
+const formMensagemModern = document.getElementById('form-mensagem');
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
+if (contactFormModern) {
+    contactFormModern.addEventListener('submit', async function(e) {
+        e.preventDefault();
 
-            formMensagem.innerHTML = '<p style="color: #4361ee;">A enviar mensagem...</p>';
-            formMensagem.style.display = 'block';
+        formMensagemModern.innerHTML = '<p style="color: #4361ee;"><i class="fas fa-spinner fa-pulse"></i> A enviar mensagem...</p>';
+        formMensagemModern.style.display = 'block';
+        formMensagemModern.style.background = '#f0f4ff';
 
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
+        const formData = new FormData(contactFormModern);
+        const data = Object.fromEntries(formData.entries());
 
-            try {
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
 
-                const result = await response.json();
+            const result = await response.json();
 
-                if (response.ok && result.success) {
-                    formMensagem.innerHTML = '<p style="color: green;">✓ Mensagem enviada com sucesso! Entraremos em contacto em breve.</p>';
-                    contactForm.reset();
-                } else {
-                    formMensagem.innerHTML = '<p style="color: red;">✗ Erro ao enviar. Tente novamente.</p>';
-                }
-            } catch (error) {
-                formMensagem.innerHTML = '<p style="color: red;">✗ Erro de rede. Verifique sua conexão.</p>';
+            if (response.ok && result.success) {
+                formMensagemModern.innerHTML = '<p style="color: #10b981;"><i class="fas fa-check-circle"></i> ✓ Mensagem enviada com sucesso! Entraremos em contacto em breve.</p>';
+                formMensagemModern.style.background = '#ecfdf5';
+                contactFormModern.reset();
+                
+                setTimeout(() => {
+                    formMensagemModern.style.display = 'none';
+                }, 5000);
+            } else {
+                formMensagemModern.innerHTML = '<p style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i> ✗ Erro ao enviar. Tente novamente.</p>';
+                formMensagemModern.style.background = '#fef2f2';
             }
-        });
-    }
+        } catch (error) {
+            formMensagemModern.innerHTML = '<p style="color: #ef4444;"><i class="fas fa-wifi"></i> ✗ Erro de rede. Verifique sua conexão.</p>';
+            formMensagemModern.style.background = '#fef2f2';
+        }
+        
+        setTimeout(() => {
+            formMensagemModern.style.display = 'none';
+        }, 6000);
+    });
+}
+
+
     
     // ============================================
     // MOSTRAR WHATSAPP APENAS QUANDO FOOTER APARECE (se implementado)
