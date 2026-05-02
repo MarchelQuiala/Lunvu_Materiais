@@ -1178,7 +1178,65 @@ function gerarTabelaDinamica(especificacoes, colunas) {
 
 
 
-    
+
+
+
+        /*    // ===== TESTE DE CARREGAMENTO DE PRODUTOS =====*/
+
+// ===== NEWSLETTER =====
+// ===== NEWSLETTER =====
+// ===== NEWSLETTER (mesmo funcionamento do formulário de contacto) =====
+const newsletterForm = document.getElementById('newsletterForm');
+const newsletterMensagem = document.getElementById('newsletterMensagem');
+
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        if (newsletterMensagem) {
+            newsletterMensagem.innerHTML = '<p style="color: #4361ee;">📧 A processar inscrição...</p>';
+            newsletterMensagem.style.display = 'block';
+        }
+
+        const formData = new FormData(newsletterForm);
+        const data = {
+            access_key: '236f710f-f052-4850-a38f-c6985744d1b2',
+            email: formData.get('email'),
+            subject: 'Nova inscrição na Newsletter - Lunvu Materiais'
+        };
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                if (newsletterMensagem) {
+                    newsletterMensagem.innerHTML = '<p style="color: green;">✓ Inscrição realizada com sucesso! Você receberá nossas novidades.</p>';
+                }
+                newsletterForm.reset();
+                
+                setTimeout(() => {
+                    if (newsletterMensagem) {
+                        newsletterMensagem.style.display = 'none';
+                    }
+                }, 5000);
+            } else {
+                if (newsletterMensagem) {
+                    newsletterMensagem.innerHTML = '<p style="color: red;">✗ Erro ao inscrever. Tente novamente.</p>';
+                }
+            }
+        } catch (error) {
+            if (newsletterMensagem) {
+                newsletterMensagem.innerHTML = '<p style="color: red;">✗ Erro de rede. Verifique sua conexão.</p>';
+            }
+        }
+    });
+}
 
 
     

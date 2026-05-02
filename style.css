@@ -868,6 +868,14 @@ section {
     transform: scale(1.05);
 }
 
+/* ===== MENSAGEM DA NEWSLETTER ===== */
+#newsletterMensagem {
+    margin-top: 15px;
+    font-size: 14px;
+    display: none;
+    text-align: center;
+}
+
 /* Footer */
 footer {
     background: #1a1a1a;
