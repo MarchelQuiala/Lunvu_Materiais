@@ -182,12 +182,12 @@ if (statsSection && stats.length > 0) {
         eletricos: [
             { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445044/I9_xmg6g4.jpg', nome: 'Disjuntor', desc: 'Disjuntor 16A' },
             { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772444997/I12_gg8eo5.jpg', nome: 'Tomada', desc: 'Tomada 10A' },
-            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445044/I10_lgewcn.jpg', nome: 'Cabo Elétrico', desc: 'Cabo 2.5mm' },
-            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772444996/I13_blgmte.webp', nome: 'Interruptor', desc: 'Interruptor simples' }
+            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445044/I10_lgewcn.jpg', nome: 'Cabo Elétrico', desc: 'Cabo 100 MTR' },
+            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772444996/I13_blgmte.webp', nome: 'Interruptor', desc: 'Interruptor simples 10A' }
         ],
         construcao: [
-            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445004/I24_qjduvm.jpg', nome: 'Madeiras', desc: 'Madeiras' },
-            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445002/I20_vzqbnx.jpg', nome: 'Ferro', desc: 'Ferro' },
+            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445004/I24_qjduvm.jpg', nome: 'Postes de Madeiras', desc: 'Postes de Madeiras' },
+            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445002/I20_vzqbnx.jpg', nome: 'Tubos de Ferro', desc: 'Tubos de Ferro' },
             { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445005/I25_ln0qsy.webp', nome: 'Electródo', desc: 'Electródo' },
             { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445007/I26_zug7pz.webp', nome: 'Chapas', desc: 'Chapas' }
         ],
@@ -199,9 +199,9 @@ if (statsSection && stats.length > 0) {
         ],
         ferramentas: [
             { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445008/I27_fng5ku.webp', nome: 'Martelo', desc: 'Martelo de unha' },
-            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445008/I28_xkduns.webp', nome: 'Chave de fenda', desc: 'Chave philips' },
+            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445008/I28_xkduns.webp', nome: 'Alicate de corte', desc: 'Alicate de corte' },
             { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445011/I30_thyh1q.jpg', nome: 'Furadeira', desc: 'Furadeira 500W' },
-            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445009/I29_zscsve.webp', nome: 'Serra', desc: 'Serra manual' }
+            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445009/I29_zscsve.webp', nome: 'Serra elétrica', desc: 'Serra elétrica' }
         ]
     };
 
