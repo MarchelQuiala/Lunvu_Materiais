@@ -188,7 +188,7 @@ if (statsSection && stats.length > 0) {
         construcao: [
             { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445004/I24_qjduvm.jpg', nome: 'Postes de Madeiras', desc: 'Postes de Madeiras' },
             { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445002/I20_vzqbnx.jpg', nome: 'Tubos de Ferro', desc: 'Tubos de Ferro' },
-            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772445005/I25_ln0qsy.webp', nome: 'Electródo', desc: 'Electródo' },
+            { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778071265/OIP_2_sc04jk.webp', nome: 'Electródo', desc: 'Electródo' },
             { img: 'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778071153/R_wknrf7.jpg', nome: 'Chapas', desc: 'Chapas' }
         ],
         canalizacao: [
