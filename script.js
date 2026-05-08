@@ -752,10 +752,7 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             { id: 'fer3', nome: '3. EQUIPAMENTOS DE MEDIÇÃO' },
             { id: 'fer4', nome: '4. EPIs' },
             { id: 'fer5', nome: '5. ACESSÓRIOS PARA FERRAMENTAS' },
-    ,
-            
-          
-         
+     
         ]
     };
 
