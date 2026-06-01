@@ -516,6 +516,23 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     };
 
+        const dadosTecnicosElet2 = {};
+        const dadosTecnicosElet3 = {};
+        const dadosTecnicosElet4 = {};
+        const dadosTecnicosElet5 = {};
+        const dadosTecnicosElet6 = {};
+        const dadosTecnicosElet7 = {};
+        const dadosTecnicosElet8 = {};
+        const dadosTecnicosElet9 = {};
+        const dadosTecnicosElet10 = {};
+                
+
+
+
+
+    const dadosTecnicosConstrucao = {};
+    const dadosTecnicosCanalizacao = {};
+    const dadosTecnicosFerramentas = {};
     // ===== FUNÇÃO PARA GERAR TABELA DINÂMICA =====
 // ===== FUNÇÃO PARA GERAR TABELA DINÂMICA (VERSÃO SIMPLES - SEM ROWSPAN) =====
 // ===== FUNÇÃO PARA GERAR TABELA DINÂMICA (UNIVERSAL - SUPORTA ROWSPAN SÓ COM SEÇÃO) =====
@@ -901,7 +918,98 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268961/uniao-concentrica-simples-600x600_vqvfdc.jpg',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268962/Terminal-Liga-Unica-Jobasi-500x500_j4llga.png',
             'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776268960/terminal-de-cobre-macico-de-cravar-mt-600x600_cyzkuc.jpg',
-        ]
+        ],
+
+          // ===== img construção =====
+
+        'cons1': [
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778503060/V500_v5znjb.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778503065/HRB400-ASTM-A615-Deformed-Iron-Bar-Steel-Rebars-6m-S500-S400-Bundle_1_w17jhr.webp',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778503064/varao_nervurado_A_400_NR_10x12mt_aibpld.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778503060/HRB400-ASTM-A615-Deformed-Iron-Bar-Steel-Rebars-6m-S500-S400-Bundle_wmedfw.webp',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778503058/VA_btiod4.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778680164/varao-roscado_1_rrjclj.png',
+             
+        ],
+      
+        'cons2': [
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778676254/polines-_dbvgmx.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778676254/transferir_eyp6x0.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778676253/p-madera-tratada-autoclave_qmcf8m.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778676253/uploads_images_products_1130x441_c_poste-de-madera-2_c55wgt.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778676253/p-madera-tratada-autoclave_qmcf8m.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778676253/Photo-Credit-2-Stella-Jones-630x420_bosffo.jpg',
+
+        ],
+        'cons3': [
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778678025/24520425_dh1r7v.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778678023/CLS-34-de-78_mtnhxn.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778678021/areas_negocio_postesbetao_01_x11bky.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778678017/circular_hec8ki.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778678013/121812_1473014_1_u391jz.avif',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778678012/64473c51d09426.27459404_my75oo.jpg',
+        ],
+        'cons4':[
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778681201/ARAME_RECOZIDO_qu0txk.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778681200/ARAME_FAR_PADO_bpkmoz.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778681200/ARAME_GALVANIZADO_bi1ffe.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778682767/cocer_gnl5yx.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778681767/metal_opujzd.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778682767/a%C3%A7o_yga8ir.jpg',
+        ],
+            'cons5': [
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778071265/OIP_2_sc04jk.webp',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778683802/ele_puymfk.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778684454/erle_wtgfot.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778683803/electro_xfm7hy.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778683802/elec_cr6ony.jpg',
+                'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778683802/el_uddfwx.jpg',
+
+            ],
+                'cons6': [
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780150209/OIP_7_kcay7p.webp',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780150209/OIP_8_lqorz5.webp',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778685191/Pregos-Wood-01-1_htwtnu.png',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778685187/prego_rovrrg.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780150208/OIP_1_mkegrs.webp',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778685186/pc_jdbrvd.jpg',
+                ],
+                'cons7': [
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778685592/transferir_2_tik3qj.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778685593/transferir_o6vcnv.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1778685588/images_2_qibzhu.jpg',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780150212/red-color-coated-roofing-sheet-1000x1000_ugunwr.webp',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780318419/OIP_1_oejxg1.webp',
+                    'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780318419/OIP_2_-_C%C3%B3pia_i331qg.webp',
+                ],
+
+                    'cons8': [
+
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780150210/OIP_22_uvul3y.webp',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780150210/OIP_21_kjwfe8.webp',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780319992/OIP_3_futhyz.webp',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780320306/tubos-de-ferro-fundido-ductil-05_qsf3ja.jpg',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780320980/OIP_8_eyseys.webp',
+                        'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780320306/20201015_124749hq-min-pe80-1-1024x683_y48xsl.jpg',
+                    ],
+                        'cons9': [
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780324239/Dulapi-lemn-dimensionati_fkvgcm.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780324239/CopiadeIMG_34872-min_2048x_hfq7sh.webp',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780324240/jamun-wood-cut-size-1000x1000_aktamv.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780324244/prancha-viga-de-30-x-5-cm-peroba-rosa-original-madeira-nova-D_NQ_NP_808036-MLB28053395769_082018-F_z7akim.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780324743/formwork-timber-beam-903_wxuv6k.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780324576/image_wuulyg.webp'
+                        ],
+
+                          'cons10':[
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780326701/OIP_15_e9r4sa.webp',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780326703/red-film-faced-plywood-1000x1000_wgwzww.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780326619/12mm-15mm-18mm-finger-joint-formwork-plywood-film-faced-plywood-500x500_pvuzph.webp',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780326619/b7140a17ac805626f981d360dc1757bf_cysv90.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780326621/Elegant-Interior-Cladding-Decoration-Fireproof-Plywood-Panel-Wall-Panel_qnnsfv.webp',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780326620/Contraplacado_Combi_1_n3us35.jpg'
+                          ]
+
     };
 
     // ===== NOMES DOS PRODUTOS =====
@@ -922,6 +1030,7 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             "Cachimbo em aluminio para baixadas",
             "Pinça de Suspensão Mural"
         ],
+            'elet2': [],
         'elet3': [
             "Pinça de Suspensão",
             "Ligador de Derivação",
@@ -937,31 +1046,52 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             "Luva de Emenda",
             "Para-raios",
             "Espaçador de Cabos"
-        ]
+        ],
+         'elet4': [],
+          'elet5': [],
+           'elet6': [],
+            'elet7': [],
+             'elet8': [],
+              'elet9': [],
+               'elet10': [],
+
+
+
+
+
+
+
+        
     };
 
     // ===== BASE DE DADOS DE PRODUTOS =====
-    const catalogoProdutos = {};
+ // ===== CATÁLOGO DE PRODUTOS COM QUANTIDADE VARIÁVEL =====
+const catalogoProdutos = {};
 
-    // Gerar produtos usando as URLs
-    for (const cat in subcategoriasData) {
-        subcategoriasData[cat].forEach(sub => {
-            const produtos = [];
-            const urls = imagensCloudinary[sub.id] || [];
-            const nomes = nomesProdutos[sub.id] || [];
-            
-            for (let i = 0; i < 14; i++) {
-                const url = urls[i] || (CLOUDINARY + 'placeholder.jpg');
-                const nome = nomes[i] || `Produto ${sub.id} - ${i+1}`;
-                
-                produtos.push({
-                    img: url,
-                    nome: nome
-                });
-            }
-            catalogoProdutos[sub.id] = produtos;
-        });
-    }
+for (const cat in subcategoriasData) {
+    subcategoriasData[cat].forEach(sub => {
+        const produtos = [];
+        const urls = imagensCloudinary[sub.id] || [];
+        const nomes = nomesProdutos[sub.id] || [];
+        
+        // DEFINE A QUANTIDADE BASEADA NOS DADOS QUE VOCÊ FORNECEU
+        let quantidadeProdutos = Math.max(nomes.length, urls.length);
+        
+        // Se não tem nenhum dado, mostra 1 placeholder
+        if (quantidadeProdutos === 0) {
+            quantidadeProdutos = 1;
+        }
+        
+        // CRIA OS PRODUTOS (SOMENTE A QUANTIDADE QUE VOCÊ QUER)
+        for (let i = 0; i < quantidadeProdutos; i++) {
+            const url = urls[i] || (CLOUDINARY + 'placeholder.jpg');
+            const nome = nomes[i] || `Produto ${sub.id} - ${i+1}`;
+            produtos.push({ img: url, nome: nome });
+        }
+        
+        catalogoProdutos[sub.id] = produtos;
+    });
+}
 
     // ===== VARIÁVEIS DE ESTADO =====
     let subcategoriaAtual = null;
