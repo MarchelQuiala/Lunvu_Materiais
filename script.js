@@ -751,17 +751,17 @@ function gerarTabelaDinamica(especificacoes, colunas) {
         ],
         canalizacao: [
             { id: 'can1', nome: '1. TUBOS PVC E ACESSÓRIOS' },
-             { id: 'can1', nome: '2. TUBOS PEAD E ACESSÓRIOS' },
-              { id: 'can1', nome: '3. TUBOS PPR E ACESSÓRIOS' },
-            { id: 'can2', nome: '4. CONEXÕES' },
-            { id: 'can3', nome: '5. REGISTROS E VÁLVULAS' },
-            { id: 'can4', nome: '6. CAIXAS DE INSPEÇÃO' },
-            { id: 'can5', nome: '7. SIFÕES E RALOS' },
-            { id: 'can6', nome: '8. TUBOS DE COBRE' },
-            { id: 'can7', nome: '9. AQUECEDORES' },
-            { id: 'can8', nome: '10. BOMBAS' },
-            { id: 'can9', nome: '11. FILTROS' },
-            { id: 'can10', nome: '10. ACESSÓRIOS PARA ESGOTO' },
+             { id: 'can2', nome: '2. TUBOS PEAD E ACESSÓRIOS' },
+              { id: 'can3', nome: '3. TUBOS PPR E ACESSÓRIOS' },
+            { id: 'can4', nome: '4. CONEXÕES' },
+            { id: 'can5', nome: '5. REGISTROS E VÁLVULAS' },
+            { id: 'can6', nome: '6. CAIXAS DE INSPEÇÃO' },
+            { id: 'can7', nome: '7. SIFÕES E RALOS' },
+            { id: 'can8', nome: '8. TUBOS DE COBRE' },
+            { id: 'can9', nome: '9. AQUECEDORES' },
+            { id: 'can10', nome: '10. BOMBAS' },
+            { id: 'can11', nome: '11. FILTROS' },
+            { id: 'can12', nome: '12. ACESSÓRIOS PARA ESGOTO' },
         ],
         ferramentas: [
             { id: 'fer1', nome: '1. FERRAMENTAS MANUAIS' },
@@ -1008,6 +1008,25 @@ function gerarTabelaDinamica(especificacoes, colunas) {
                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780326619/b7140a17ac805626f981d360dc1757bf_cysv90.jpg',
                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780326621/Elegant-Interior-Cladding-Decoration-Fireproof-Plywood-Panel-Wall-Panel_qnnsfv.webp',
                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780326620/Contraplacado_Combi_1_n3us35.jpg'
+                          ],
+                          'can1': [
+
+                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505014/upvc-cold-water-pipe-250x250_sfpomn.webp',
+                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505017/tubo-industrial_wyodak.png',
+                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505014/tuberias-y-productos-de-pvc-en-construccion-1024x614_uekne2.jpg',
+                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505014/R_lxpn8e.jpg',
+                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505014/stainless-steel-pipe-500x500_pvfm2l.webp',
+                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505012/OIP_3_rhmniw.webp'
+                        
+                          ],
+                          'can2': [
+
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505012/OIP_5_b3hpuu.webp',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505012/manguera-extra-verde-estriada_nqeuke.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505012/OIP_6_aomjrh.webp',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505014/s-l500_qusei0.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505011/DUTO-CORRUGADO-PEAD-1-2-POL.-VERDE_z3c9m7.webp',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505011/manguera-bicolor-verde-amarilla_ugiclb.jpg'
                           ]
 
     };
