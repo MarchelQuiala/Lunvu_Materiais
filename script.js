@@ -516,7 +516,13 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     };
 
-        const dadosTecnicosElet2 = {};
+        const dadosTecnicosElet2 = {
+
+           
+
+
+
+        };
         const dadosTecnicosElet3 = {};
         const dadosTecnicosElet4 = {};
         const dadosTecnicosElet5 = {};
@@ -792,20 +798,20 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1772539208/pinca-de-suspencao-mural-l7wv-600x600_pjkghz.jpg',
         ],
         'elet2': [
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270242/transferir_25_nqzw0k.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270243/transferir_26_jxi5fg.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270829/transferir_32_sbg2hh.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270244/transferir_27_dwavkq.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270245/transferir_crg42r.png',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270238/images_18_ucnflo.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270239/images_19_jeotn5.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270237/images_17_omeq1h.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270242/transferir_24_bc4qn1.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270234/images_11_onceqn.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/q_auto/f_auto/v1776270237/images_16_qn20ox.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776272347/images_26_wjc93n.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776271376/images_25_biwgrf.jpg',
-            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776271160/images_24_qkvvmn.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682767/IMG-20260605-WA0029_2_wgpuyq.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682767/IMG-20260605-WA0028_2_bqlpwn.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682764/IMG-20260605-WA0022_2_lhjyqw.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682765/IMG-20260605-WA0023_2_lkughy.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682763/IMG-20260605-WA0024_2_v2tjgc.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682766/IMG-20260605-WA0025_2_dzpptp.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682766/IMG-20260605-WA0021_2_x7tn3c.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682763/IMG-20260605-WA0026_2_mehqte.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682761/IMG-20260605-WA0031_2_kcl7rx.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682760/IMG-20260605-WA0032_2_ashjkz.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682760/IMG-20260605-WA0033_2_qq4zjc.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682760/IMG-20260605-WA0034_2_r4i9gq.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780682760/IMG-20260605-WA0035_2_zf3nsj.jpg',
+            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1776270238/images_18_ucnflo.jpg',
         ],
         'elet3': [
             'https://res.cloudinary.com/dhsg68f5x/image/upload/T6_ixlz8t',
@@ -1027,6 +1033,23 @@ function gerarTabelaDinamica(especificacoes, colunas) {
                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505014/s-l500_qusei0.jpg',
                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505011/DUTO-CORRUGADO-PEAD-1-2-POL.-VERDE_z3c9m7.webp',
                             'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780505011/manguera-bicolor-verde-amarilla_ugiclb.jpg'
+                          ],
+                          'can3': [
+                           'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780582354/ppr_drap9f.jpg',
+                           'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780582355/pprver1_iu9kqh.jpg',
+                           'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780582354/pprpreto_tekj0o.jpg',
+                           'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780582355/ppr_branco_c9ujgg.jpg',
+                           'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780582355/ppr_azul_lhpdcm.jpg',
+                           'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780583496/ppr_cor_msgjuw.webp'
+
+                          ],
+                          'can4': [
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780584664/conexp_eva6zs.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780584663/conecpead_czjxht.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780584662/conecppr_jouklw.webp',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780584661/conec_cor_dbzx6m.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780584661/conepvc_pabckp.jpg',
+                            'https://res.cloudinary.com/dhsg68f5x/image/upload/v1780584661/conexee_zbdrpl.webp'
                           ]
 
     };
@@ -1049,7 +1072,24 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             "Cachimbo em aluminio para baixadas",
             "Pinça de Suspensão Mural"
         ],
-            'elet2': [],
+            'elet2': [
+            "Projector LED IP66 600W",
+            "Projector LED IP66 400W",
+            "Projector LED IP66 300W",
+            "Projector LED IP66 220W",
+            "Projector LED IP66 180W",
+            "Projector LED IP66 80W",
+            "Projector LED IP66 50W",
+            "Projector LED IP66 400W",
+            "Projector LED IP66 300W",
+            "Projector LED IP66 100W",
+            "Projector LED IP66 50W",
+            "Projector LED IP66 30W",
+            "Projector LED IP66 20W",
+            "Painel LED redondo"
+
+
+            ],
         'elet3': [
             "Pinça de Suspensão",
             "Ligador de Derivação",
