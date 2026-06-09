@@ -516,29 +516,136 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     };
 
-        const dadosTecnicosElet2 = {
+     // ===== DADOS TÉCNICOS PARA ELET2 (ILUMINAÇÃO PÚBLICA) ==
+     // ===
+const dadosTecnicosElet2 = {
+    "Projector LED IP66 600W": {
+        aplicacao: "Estádios profissionais, aeroportos, minas, complexos industriais, portos e iluminação de grandes áreas exteriores.",
+        material: "Estrutura robusta em alumínio fundido, múltiplos dissipadores térmicos, vidro temperado de alta resistência e vedação IP66 contra poeira e água",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [
+            { potencia: "600W", tensao: "220-240V AC", frequencia: "50/60Hz", ip: "IP66" }
+        ]
+    },
+    "Projector LED IP66 400W": {
+        aplicacao: "Estádios, terminais rodoviários, portos, zonas de carga e descarga e grandes áreas públicas.",
+        material: "Carcaça em alumínio industrial anticorrosivo, vidro temperado de segurança e suporte metálico reforçado para montagem em postes",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [{ potencia: "400W", tensao: "220-240V AC", frequencia: "50/60Hz",  ip: "IP66" }]
+    },
+    "Projector LED IP66 300W": {
+        aplicacao: "Campos de futebol de pequeno porte, grandes parques, estaleiros de construção e instalações industriais.",
+        material: "Alumínio fundido de alta resistência, dissipadores de calor reforçados, vidro temperado e componentes eletrónicos protegidos contra humidade.",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [{ potencia: "300W", tensao: "220-240V AC", frequencia: "50/60Hz",  ip: "IP66" }]
+    },
+    "Projector LED IP66 220W": {
+        aplicacao: "Campos polidesportivos, estacionamentos, postos de combustível, centros logísticos e áreas industriais.",
+        material: "Corpo em liga de alumínio de elevada dissipação térmica, vidro temperado resistente a impactos e vedação em silicone impermeável",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [{ potencia: "220W", tensao: "220-240V AC", frequencia: "50/60Hz",  ip: "IP66" }]
+    },
+    "Projector LED IP66 180W": {
+        aplicacao: "Armazéns, oficinas, pátios industriais, parques e áreas externas de média dimensão.",
+        material: "Estrutura em alumínio injetado com dissipador térmico integrado, lente óptica de policarbonato ou vidro temperado e suporte em aço galvanizado. ",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [{ potencia: "180W", tensao: "220-240V AC", frequencia: "50/60Hz",  ip: "IP66" }]
+    },
+    "Projector LED IP66 80W": {
+        aplicacao: "Iluminação de jardins, fachadas, estacionamentos residenciais, áreas comerciais e entradas de edifícios",
+        material: "Corpo em alumínio fundido com pintura eletrostática anticorrosiva, difusor em vidro temperado de alta resistência e suporte metálico ajustável.",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [{ potencia: "80W", tensao: "220-240V AC", frequencia: "50/60Hz",  ip: "IP66" }]
+    },
+    "Projector LED IP66 50W": {
+        aplicacao: "Garagens, fachadas comerciais, quintais e estacionamentos pequenos.",
+        material: "Corpo em alumínio fundido, vidro temperado e suporte metálico",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [{ potencia: "50W", tensao: "220-240V AC", frequencia: "50/60Hz",  ip: "IP66" }]
+    },
+    "Projector LED IP66 100W": {
+        aplicacao: "Armazéns, oficinas, estacionamentos médios e iluminação de segurança.  ",
+        material: "Corpo em alumínio fundido, vidro temperado e suporte metálico.",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [{ potencia: "100W", tensao: "220-240V AC", frequencia: "50/60Hz",  ip: "IP66" }]
+    },
+    "Projector LED IP66 30W": {
+        aplicacao: "Jardins, corredores, fachadas residenciais, áreas externas pequenas.",
+        material: "Corpo em alumínio fundido, vidro temperado e suporte metálico.",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [{ potencia: "30W", tensao: "220-240V AC", frequencia: "50/60Hz",  ip: "IP66" }]
+    },
+    "Projector LED IP66 20W": {
+        aplicacao: "Jardins, entradas de residências, varandas, pequenos corredores, muros e iluminação decorativa externa.",
+        material: "Corpo em alumínio fundido, vidro temperado e suporte metálico anticorrosão.",
+        colunas: ["Potência", "Tensão","Frequência", "IP"],
+        especificacoes: [{ potencia: "20W", tensao: "220-240V AC", frequencia: "50/60Hz",   ip: "IP66" }]
+    },
+    "Painel LED redondo": {
+        aplicacao: "Pequenos corredores, quartos e WCs, áreas de passagem, iluminação decorativa e comercial.",
+        material: "Alumínio e policarbonato",
+        colunas: ["Potência", "Diâmetro", "IP"],
+        especificacoes: [{ potencia: "3W-24W"      , diametro: "8,5cm-30mm", ip: "IP20-IP65" }]
+    }
+};
 
-           
+// ===== DADOS TÉCNICOS PARA ELET3 (LINHAS NUAS) - temporário =====
+const dadosTecnicosElet3 = {};
+const dadosTecnicosElet4 = {};
+const dadosTecnicosElet5 = {};
+const dadosTecnicosElet6 = {};
+const dadosTecnicosElet7 = {};
+const dadosTecnicosElet8 = {};
+const dadosTecnicosElet9 = {};
+const dadosTecnicosElet10 = {};
 
+// ===== DADOS TÉCNICOS PARA CONSTRUÇÃO =====
+const dadosTecnicosConstrucao = {
+    "Varões de Aço": {
+        aplicacao: "Armadura de betão armado, fundações, lajes, vigas.",
+        material: "Aço carbono nervurado (ASTM A615, S400, S500)",
+        colunas: ["Diâmetro", "Comprimento", "Classe"],
+        especificacoes: [
+            { diametro: "8mm", comprimento: "12m", classe: "S400" },
+            { diametro: "10mm", comprimento: "12m", classe: "S400" },
+            { diametro: "12mm", comprimento: "12m", classe: "S500" }
+        ]
+    },
+    "Postes de Madeira": {
+        aplicacao: "Redes elétricas, telecomunicações, sustentação.",
+        material: "Madeira tratada em autoclave (Eucalipto/Pinus)",
+        colunas: ["Comprimento", "Classe", "Tratamento"],
+        especificacoes: [
+            { comprimento: "8m", classe: "C4", tratamento: "CCA" },
+            { comprimento: "10m", classe: "C4", tratamento: "CCA" },
+            { comprimento: "12m", classe: "C5", tratamento: "CCA" }
+        ]
+    }
+    // Adicione os outros produtos de construcao depois
+};
 
+// ===== DADOS TÉCNICOS PARA CANALIZAÇÃO =====
+const dadosTecnicosCanalizacao = {
+    "Tubos PVC e Acessórios": {
+        aplicacao: "Redes de água fria, esgoto, drenagem.",
+        material: "PVC rígido (classe 12, 15, 20)",
+        colunas: ["Diâmetro", "Pressão", "Norma"],
+        especificacoes: [
+            { diametro: "50mm", pressao: "0.6 MPa", norma: "NBR 5688" },
+            { diametro: "75mm", pressao: "0.6 MPa", norma: "NBR 5688" }
+        ]
+    }
+    // Adicione os outros depois
+};
 
-        };
-        const dadosTecnicosElet3 = {};
-        const dadosTecnicosElet4 = {};
-        const dadosTecnicosElet5 = {};
-        const dadosTecnicosElet6 = {};
-        const dadosTecnicosElet7 = {};
-        const dadosTecnicosElet8 = {};
-        const dadosTecnicosElet9 = {};
-        const dadosTecnicosElet10 = {};
+// ===== DADOS TÉCNICOS PARA FERRAMENTAS =====
+const dadosTecnicosFerramentas = {};
                 
 
 
 
 
-    const dadosTecnicosConstrucao = {};
-    const dadosTecnicosCanalizacao = {};
-    const dadosTecnicosFerramentas = {};
+
     // ===== FUNÇÃO PARA GERAR TABELA DINÂMICA =====
 // ===== FUNÇÃO PARA GERAR TABELA DINÂMICA (VERSÃO SIMPLES - SEM ROWSPAN) =====
 // ===== FUNÇÃO PARA GERAR TABELA DINÂMICA (UNIVERSAL - SUPORTA ROWSPAN SÓ COM SEÇÃO) =====
@@ -548,99 +655,102 @@ function gerarTabelaDinamica(especificacoes, colunas) {
     if (!especificacoes || especificacoes.length === 0) {
         return '<tr><td colspan="' + colunas.length + '" style="text-align:center;">Especificações não disponíveisNonNull' + '</tr>';
     }
-    
-    // Verifica se precisa de rowspan (primeira coluna é "Seção")
-    const precisaRowspan = colunas[0] === "Seção";
-    
+
+    // Função de normalização: remove acentos, parênteses, espaços, minúsculo
+    function normalizar(str) {
+        return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '') // remove acentos
+                  .toLowerCase()
+                  .replace(/[()]/g, '')          // remove parênteses
+                  .replace(/[\s-]/g, '_');       // espaços e hífens viram underscore
+    }
+
+    // Pré-normaliza os nomes das colunas para usar como chave de busca
+    const colunasNorm = colunas.map(normalizar);
+
+    // Verifica se a primeira coluna normalizada é "secao"
+    const precisaRowspan = colunasNorm[0] === 'secao';
+
     if (precisaRowspan) {
-        // ===== ROWSPAN =====
+        // Agrupamento por seção
         const agrupado = {};
-        
         for (let i = 0; i < especificacoes.length; i++) {
             const item = especificacoes[i];
-            const chave = item.secao || "SEM SEÇÃO";
-            if (!agrupado[chave]) {
-                agrupado[chave] = [];
-            }
+            const chave = item.secao || 'SEM SEÇÃO';
+            if (!agrupado[chave]) agrupado[chave] = [];
             agrupado[chave].push(item);
         }
-        
+
         let html = '';
-        
         for (const [secao, itens] of Object.entries(agrupado)) {
             const rowspan = itens.length;
-            
             for (let i = 0; i < itens.length; i++) {
                 const item = itens[i];
                 html += '<tr>';
-                
-                // Primeira coluna (Seção) com rowspan
                 if (i === 0) {
-                    html += `<td rowspan="${rowspan}" class="secao-cell" style="vertical-align:middle; background-color:#f0f4ff; font-weight:bold;">${secao}</td>`;
+                    html += `<td rowspan="${rowspan}" class="secao-cell" style="vertical-align:middle; background-color:#f0f4ff; font-weight:bold;">${secao}</table>`;
                 }
-                
-                // Demais colunas
+                // Itera pelas colunas restantes
                 for (let j = 1; j < colunas.length; j++) {
-                    const coluna = colunas[j];
-                    let valor = "-";
-                    
-                    // MAPEAMENTO COMPLETO
-                    if (coluna === "Código") {
-                        valor = item.codigo || "-";
-                    } else if (coluna === "Tipo") {
-                        valor = item.tipo || "-";
-                    } else if (coluna === "Designação") {
-                        valor = item.designacao || "-";
-                    } else if (coluna === "Info") {
-                        valor = item.info || "-";
-                    } else if (coluna === "Seção Derivação" || coluna === "Secção Derivação") {
-                        // Para campo "Seção Derivação" ou "Secção Derivação"
-                        valor = item.secaoDerivacao || item.seccaoDerivacao || "-";
-                    } else {
-                        // Para qualquer outra coluna
-                        const campo = coluna.toLowerCase().replace(/ /g, '').replace(/ç/g, 'c');
-                        valor = item[campo] || "-";
+                    const colOrig = colunas[j];
+                    const colNorm = colunasNorm[j];
+                    let valor = '-';
+
+                    // Mapeamento específico (prioridade para campos especiais)
+                    if (colOrig === 'Código') valor = item.codigo || '-';
+                    else if (colOrig === 'Tipo') valor = item.tipo || '-';
+                    else if (colOrig === 'Designação') valor = item.designacao || '-';
+                    else if (colOrig === 'Info') valor = item.info || '-';
+                    else if (colOrig === 'Seção Derivação' || colOrig === 'Secção Derivação')
+                        valor = item.secaoDerivacao || item.seccaoDerivacao || '-';
+                    else {
+                        // Busca dinâmica: procura a primeira propriedade cujo nome normalizado seja igual a colNorm
+                        let encontrado = false;
+                        for (let prop in item) {
+                            if (normalizar(prop) === colNorm) {
+                                valor = item[prop];
+                                encontrado = true;
+                                break;
+                            }
+                        }
+                        if (!encontrado) valor = '-';
                     }
-                    
                     html += `<td class="cell-${j}">${valor}</td>`;
                 }
-                
                 html += '</tr>';
             }
         }
         return html;
     } else {
-        // ===== TABELA SIMPLES =====
+        // Tabela simples (sem rowspan)
         let html = '';
-        
         for (let i = 0; i < especificacoes.length; i++) {
             const item = especificacoes[i];
             html += '<tr>';
-            
             for (let j = 0; j < colunas.length; j++) {
-                const coluna = colunas[j];
-                let valor = "-";
-                
-                // MAPEAMENTO COMPLETO
-                if (coluna === "Código") {
-                    valor = item.codigo || "-";
-                } else if (coluna === "Tipo") {
-                    valor = item.tipo || "-";
-                } else if (coluna === "Designação") {
-                    valor = item.designacao || "-";
-                } else if (coluna === "Info") {
-                    valor = item.info || "-";
-                } else if (coluna === "Seção Derivação" || coluna === "Secção Derivação") {
-                    valor = item.secaoDerivacao || item.seccaoDerivacao || "-";
-                } else {
-                    const campo = coluna.toLowerCase().replace(/ /g, '').replace(/ç/g, 'c');
-                    valor = item[campo] || "-";
+                const colOrig = colunas[j];
+                const colNorm = colunasNorm[j];
+                let valor = '-';
+
+                if (colOrig === 'Código') valor = item.codigo || '-';
+                else if (colOrig === 'Tipo') valor = item.tipo || '-';
+                else if (colOrig === 'Designação') valor = item.designacao || '-';
+                else if (colOrig === 'Info') valor = item.info || '-';
+                else if (colOrig === 'Seção Derivação' || colOrig === 'Secção Derivação')
+                    valor = item.secaoDerivacao || item.seccaoDerivacao || '-';
+                else {
+                    let encontrado = false;
+                    for (let prop in item) {
+                        if (normalizar(prop) === colNorm) {
+                            valor = item[prop];
+                            encontrado = true;
+                            break;
+                        }
+                    }
+                    if (!encontrado) valor = '-';
                 }
-                
                 html += `<td class="cell-${j}">${valor}</td>`;
             }
-            
-            html += '<tr>';
+            html += '</tr>';
         }
         return html;
     }
@@ -683,51 +793,60 @@ function gerarTabelaDinamica(especificacoes, colunas) {
     }
 
     // ===== FUNÇÃO PARA ABRIR MODAL =====
-    function abrirModal(produto) {
-        console.log("Abrindo modal para:", produto.nome);
-        
-        const modal = document.getElementById('modal-produto');
-        const modalImg = document.getElementById('modal-img');
-        const modalNome = document.getElementById('modal-nome');
-        const modalAplicacao = document.getElementById('modal-aplicacao');
-        const modalMaterial = document.getElementById('modal-material');
-        
-        modalImg.src = produto.img;
-        modalNome.textContent = produto.nome;
-        
-        const dadosTecnicos = dadosTecnicosElet1[produto.nome];
-        
-        if (dadosTecnicos) {
-            modalAplicacao.textContent = dadosTecnicos.aplicacao;
-            modalMaterial.textContent = dadosTecnicos.material;
-            especificacoesCompletas = dadosTecnicos.especificacoes;
-            colunasAtuais = dadosTecnicos.colunas || ["Seção", "Código", "Tipo"];
-            
-            atualizarCabecalhoTabela(colunasAtuais);
-            tabelaPaginaAtual = 1;
-            renderizarTabelaComPaginacao();
-        } else {
-            modalAplicacao.textContent = 'Consultar representante comercial';
-            modalMaterial.textContent = 'Consultar representante comercial';
-            especificacoesCompletas = [];
-            colunasAtuais = ["Seção", "Código", "Tipo"];
-            atualizarCabecalhoTabela(colunasAtuais);
-            
-            const tabelaBody = document.getElementById('tabela-especificacoes-body');
-            if (tabelaBody) {
-                tabelaBody.innerHTML = '<td><td colspan="3" style="text-align:center;">Especificações em desenvolvimento</td></tr>';
-            }
-            const btnAnteriorTab = document.getElementById('tabAnterior');
-            const btnProximoTab = document.getElementById('tabProximo');
-            if (btnAnteriorTab) btnAnteriorTab.disabled = true;
-            if (btnProximoTab) btnProximoTab.disabled = true;
-            const paginaInfoTab = document.getElementById('tabPaginaInfo');
-            if (paginaInfoTab) paginaInfoTab.textContent = 'Página 1';
+ function abrirModal(produto, subcategoriaId) {
+    console.log("Abrindo modal para:", produto.nome, "categoria:", subcategoriaId);
+    
+    const modal = document.getElementById('modal-produto');
+    const modalImg = document.getElementById('modal-img');
+    const modalNome = document.getElementById('modal-nome');
+    const modalAplicacao = document.getElementById('modal-aplicacao');
+    const modalMaterial = document.getElementById('modal-material');
+    
+    modalImg.src = produto.img;
+    modalNome.textContent = produto.nome;
+    
+    // Mapa que liga cada subcategoria ao seu objeto de dados
+    const dadosPorSubcategoria = {
+        elet1: dadosTecnicosElet1,
+        elet2: dadosTecnicosElet2,
+        elet3: dadosTecnicosElet3,
+        elet4: dadosTecnicosElet4,
+        elet5: dadosTecnicosElet5,
+        elet6: dadosTecnicosElet6,
+        elet7: dadosTecnicosElet7,
+        elet8: dadosTecnicosElet8,
+        elet9: dadosTecnicosElet9,
+        elet10: dadosTecnicosElet10,
+        construcao: dadosTecnicosConstrucao,
+        canalizacao: dadosTecnicosCanalizacao,
+        ferramentas: dadosTecnicosFerramentas
+    };
+    
+    const dadosTecnicos = dadosPorSubcategoria[subcategoriaId]?.[produto.nome];
+    
+    if (dadosTecnicos) {
+        modalAplicacao.textContent = dadosTecnicos.aplicacao || "Não informada";
+        modalMaterial.textContent = dadosTecnicos.material || "Não informado";
+        especificacoesCompletas = dadosTecnicos.especificacoes || [];
+        colunasAtuais = dadosTecnicos.colunas || ["Seção", "Código", "Tipo"];
+        atualizarCabecalhoTabela(colunasAtuais);
+        tabelaPaginaAtual = 1;
+        renderizarTabelaComPaginacao();
+    } else {
+        modalAplicacao.textContent = 'Dados técnicos em desenvolvimento';
+        modalMaterial.textContent = 'Consultar representante comercial';
+        especificacoesCompletas = [];
+        colunasAtuais = ["Seção", "Código", "Tipo"];
+        atualizarCabecalhoTabela(colunasAtuais);
+        const tabelaBody = document.getElementById('tabela-especificacoes-body');
+        if (tabelaBody) {
+            tabelaBody.innerHTML = '<td><td colspan="3" style="text-align:center;">Especificações em breve</td></tr>';
         }
-        
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
     }
+    
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
 
     // ===== DADOS DAS SUBCATEGORIAS =====
     const subcategoriasData = {
@@ -1187,7 +1306,7 @@ for (const cat in subcategoriasData) {
         produtosPaginados.forEach(prod => {
             const produtoJSON = JSON.stringify(prod).replace(/'/g, "&apos;");
             html += `
-                <div class="material-card" onclick='abrirModal(${produtoJSON})'>
+                <div class="material-card" onclick='abrirModal(${produtoJSON}, "${subcategoriaAtual}")'>
                     <img src="${prod.img}" alt="${prod.nome}" onerror="this.src='${CLOUDINARY}placeholder.jpg'">
                     <div class="card-body">
                         <h4>${prod.nome}</h4>
