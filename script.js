@@ -590,7 +590,70 @@ const dadosTecnicosElet2 = {
 };
 
 // ===== DADOS TÉCNICOS PARA ELET3 (LINHAS NUAS) - temporário =====
-const dadosTecnicosElet3 = {};
+const dadosTecnicosElet3 = {
+       "Terminal Bimetálico (AL-CU) de Aperto por Estribos para Condutores de Cobre": {
+            aplicacao: "Ligação de condutores nus em alumínio, ACSR ou almelec a bornes de aparelhagem em cobre",
+            material: "Liga de alumínio e cobre electrolítico, estribos e porcas disponíveis em aço inoxidável ou aço carbono",
+            colunas: ["Seção", "Código", "Furo","Info"],
+            especificacoes: [
+                { secao: "16-50 mm²", codigo: "9113600011", furo: "1 Furo", info: "1 Estribo" },
+                { secao: "34-116 mm²", codigo: "9113600018", furo: "1 Furo", info: "2 Estribo" },
+                { secao: "34-116 mm²", codigo: "9113600021", furo: "2 Furos", info: "2 Estribo" },
+                { secao: "75-160 mm²", codigo: "9113450731", furo: "1 Furo", info: "3 Estribo" },
+                { secao: "75-235 mm²", codigo: "9113600034", furo: "1 Furo", info: "3 Estribo" },
+                { secao: "75-235 mm²", codigo: "9113600033", furo: "2 Furos" , info: "2 Estribo" },
+                { secao: "75-235 mm²", codigo: "9113600032", furo: "2 Furos", info: "3 Estribo" },
+                { secao: "75-325 mm²", codigo: "9113600038", furo: "2 Furos", info: "3 Estribo" }
+
+            ]
+        },
+
+         "Conectores Terminais de Aperto Mecânico": {
+            aplicacao: "Derivação de cabos nus em alumínio, ACSR ou almelec, em redes de BT ou MT",
+            material: "Corpo em perfil de alumínio. Com 1 parafuso ou 2 parafusos e porcas em aço 8.8 ou aço inoxidável",
+            colunas: ["Seção", "Código", "Tipo","Info"],
+            especificacoes: [
+                { secao: "10-95 mm²", codigo: "9113450723", tipo: "Alumínio – Aço 8.8", info: "1 Parafuso" },
+                { secao: "10-95 mm²", codigo: "9113450724", tipo: "Alumínio – Inox", info: "1 Parafuso" },
+                { secao: "10-95 mm²", codigo: "9113450727", tipo: "Alumínio – Aço 8.8", info: "2 Parafusos" },
+                { secao: "10-95 mm²", codigo: "9113450728", tipo: "Alumínio – Inox", info: "2 Parafusos" },
+                { secao: "35-160 mm²", codigo: "9113450705", tipo: "Alumínio – Aço 8.8", info: "2 Parafusos" },
+                { secao: "35-160 mm²", codigo: "9113450706", tipo: "Alumínio – Inox", info: "2 Parafusos" }
+            ]
+        },
+    
+           "Conectores Terminais de Aperto Mecânico.": {
+            aplicacao: "Conectores terminais fabricados de acordo a DMA-C66-804N e segundo as especificação da E-REDES, para aplicação em cabos aéreos de liga de alumínio, alumínio-aço ou cabos revestidos conforme DMA-C34-120, DMA-C34-125, DMA-C34-126 e DMA-C34-127.",
+            material: "Monometálicos ou bimetálicos, em liga de alumínio e barra de cobre eletrolítica, elementos de fixação em aço inoxidável.",
+            colunas: ["Seção", "Código", "Tipo","Patilha"],
+            especificacoes: [
+                { secao: "34-90 mm²", codigo: "9113600086", tipo: "Bimetálico AL-CU", patilha: "90º com furo 13" },
+                { secao: "34-90 mm²", codigo: "9113600087", tipo: "Bimetálico AL-CU", patilha: "90º com furo 17" },
+                { secao: "148-235 mm²", codigo: "9113600088", tipo: "Bimetálico AL-CU", patilha: "90º com furo 17" },
+                { secao: "55-90 mm²", codigo: "9113600089", tipo: "Alumínio", patilha: "90º com furo 13" },
+                { secao: "148-160 mm²", codigo: "9113600092", tipo: "Alumínio", patilha: "90º NEMA" },
+                { secao: "288-325 mm²", codigo: "9113600093", tipo: "Alumínio", patilha: "90º NEMA" }
+            ]
+        },
+
+        
+                "Ligador de Derivação em Alumínio": {
+            aplicacao: "Ligação e derivação de cabos nus em alumínio em redes BT e MT.",
+            material: "Corpo em alumínio, Parafuso, porca e anilha plana em Aço Inox ou Aço carbono",
+            colunas: ["Seção", "Código", "Tipo","Patilha"],
+            especificacoes: [
+                { secao: "34-90 mm²", codigo: "9113600086", tipo: "Bimetálico AL-CU", patilha: "90º com furo 13" },
+                { secao: "34-90 mm²", codigo: "9113600087", tipo: "Bimetálico AL-CU", patilha: "90º com furo 17" },
+                { secao: "148-235 mm²", codigo: "9113600088", tipo: "Bimetálico AL-CU", patilha: "90º com furo 17" },
+                { secao: "55-90 mm²", codigo: "9113600089", tipo: "Alumínio", patilha: "90º com furo 13" },
+                { secao: "148-160 mm²", codigo: "9113600092", tipo: "Alumínio", patilha: "90º NEMA" },
+                { secao: "288-325 mm²", codigo: "9113600093", tipo: "Alumínio", patilha: "90º NEMA" }
+            ]
+        },
+
+
+
+};
 const dadosTecnicosElet4 = {};
 const dadosTecnicosElet5 = {};
 const dadosTecnicosElet6 = {};
@@ -1210,7 +1273,7 @@ function gerarTabelaDinamica(especificacoes, colunas) {
 
             ],
         'elet3': [
-            "Pinça de Suspensão",
+            "Ligador de Derivação em Alumínio",
             "Ligador de Derivação",
             "Conector de Tensão",
             "Gancho de Ancoragem",
@@ -1218,11 +1281,11 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             "Manilha de Suspensão",
             "Cantoneira de Fixação",
             "Braço de Sustentação",
-            "Isolador de Porcelana",
+            "Conectores Terminais de Aperto Mecânico.",
             "Grampo de Ancoragem",
-            "Conector Bimetálico",
-            "Luva de Emenda",
-            "Para-raios",
+            "Ligador Paralelo de Alumínio LPA (Secções Diferentes)",
+            "Terminal Bimetálico (AL-CU) de Aperto por Estribos para Condutores de Cobre",
+            "Conectores Terminais de Aperto Mecânico.",
             "Espaçador de Cabos"
         ],
          'elet4': [],
