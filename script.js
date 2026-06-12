@@ -651,7 +651,25 @@ const dadosTecnicosElet3 = {
             ]
         },
 
-                    "Ligador Paralelo para Condutores em Alumínio (Secções Diferentes)": {
+                    "Ligador Paralelo para Condutores em Alumínio ": {
+            aplicacao: "Derivação de cabos nus em alumínio, ACSR ou almelec, em redes de BT ou MT.",
+            material: "Corpo em liga de alumínio. Parafusos e porcas em aço 8.8 ou aço inox",
+            colunas: ["Seção", "Código", "Tipo"],
+            especificacoes: [
+                { secao: "6-50 mm²", codigo: "9113450741", tipo: "Alumínio – Inox"},
+                { secao: "6-50 mm²", codigo: "9113450743", tipo: "Alumínio – Aço 8.8" },
+                { secao: "20-90 mm²", codigo: "9113450750", tipo: "Alumínio – Inox"},
+                { secao: "20-90 mm²", codigo: "9113450751", tipo: "Alumínio – Aço 8.8" },
+                { secao: "20-160 mm²", codigo: "9113450825", tipo: "Alumínio – Inox" },
+                { secao: "20-160 mm²", codigo: "9113450826", tipo: "Alumínio – Aço 8.8"},
+                { secao: "35-240 mm²", codigo: "9113450753", tipo: "Alumínio – Inox" },
+                { secao: "35-240 mm²", codigo: "9113450754", tipo: "Alumínio – Aço 8.8 "}
+                  
+                
+            ]
+        },
+
+                       "Ligador Paralelo para Condutores em Alumínio ": {
             aplicacao: "Derivação de cabos nus em alumínio, ACSR ou almelec, em redes de BT ou MT.",
             material: "Corpo em liga de alumínio. Parafusos e porcas em aço 8.8 ou aço inox",
             colunas: ["Seção", "Código", "Tipo"],
@@ -1295,7 +1313,7 @@ function gerarTabelaDinamica(especificacoes, colunas) {
             ],
         'elet3': [
             "Ligador de Derivação em Alumínio",
-            "Ligador Paralelo para Condutores em Alumínio (Secções Diferentes)",
+            "Ligador Paralelo para Condutores em Alumínio",
             "Conector de Tensão",
             "Gancho de Ancoragem",
             "Esticador de Linha",
