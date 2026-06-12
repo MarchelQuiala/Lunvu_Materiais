@@ -649,7 +649,8 @@ const dadosTecnicosElet3 = {
                 { secao: "148-160 mm²", codigo: "9113600092", tipo: "Alumínio", patilha: "90º NEMA" },
                 { secao: "288-325 mm²", codigo: "9113600093", tipo: "Alumínio", patilha: "90º NEMA" }
             ]
-        },
+        }
+
 
 
 
